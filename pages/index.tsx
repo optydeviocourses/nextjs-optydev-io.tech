@@ -1,23 +1,23 @@
-import Head from 'next/head';
-import { FaGithub, FaInstagram, FaYoutube } from 'react-icons/fa';
+import Head from 'next/head'
+import { FaGithub, FaInstagram, FaYoutube } from 'react-icons/fa'
 
 import {
   Container,
   Hello,
   Left,
   SocialMedia,
-  RightText,
-} from '../styles/home/styles';
+  RightText
+} from '../styles/home/styles'
 
 export default function Home(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Home | Daniel Berg</title>
-        <meta name="og:title" property="og:title" content="Daniel Bergholz" />
+        <title>Home | optydev-io.tech</title>
+        <meta name="og:title" property="og:title" content="optydev-io.tech" />
         <meta
           name="description"
-          content="Daniel Bergholz, Desenvolvedor Web Fullstack com foco em tecnologias Javascript, e graduando em Engenharia de Redes na UnB"
+          content="optydev-io.tech tudo em DevOps, FullDtack, FullCicleWeb e Fullstack"
         />
       </Head>
       <Container>
@@ -64,5 +64,5 @@ export default function Home(): JSX.Element {
         </Hello>
       </Container>
     </>
-  );
+  )
 }

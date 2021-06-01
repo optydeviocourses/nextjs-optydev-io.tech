@@ -1,6 +1,6 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
-import Button from '../../components/Button';
+import Button from '../../components/Button'
 
 import {
   Container,
@@ -12,8 +12,8 @@ import {
   BigText,
   MiddleText,
   RightText,
-  AlignButton,
-} from '../../styles/cursos/ebook/styles';
+  AlignButton
+} from '../../styles/cursos/ebook/styles'
 
 export default function Ebook(): JSX.Element {
   return (
@@ -182,5 +182,5 @@ export default function Ebook(): JSX.Element {
         </AlignButton>
       </Container>
     </>
-  );
+  )
 }

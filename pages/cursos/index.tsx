@@ -1,49 +1,49 @@
-import { GetStaticProps } from 'next';
-import Link from 'next/link';
-import Head from 'next/head';
+import { GetStaticProps } from 'next'
+import Link from 'next/link'
+import Head from 'next/head'
 
-import api from '../../services/api';
+import api from '../../services/api'
 import {
   Container,
   Course,
   Thumbnail,
   CourseList,
-  Gold,
-} from '../../styles/cursos/styles';
+  Gold
+} from '../../styles/cursos/styles'
 
 interface PlaylistItem {
-  kind: string;
-  etag: string;
-  id: string;
-  slug?: string;
+  kind: string
+  etag: string
+  id: string
+  slug?: string
   snippet: {
-    publishedAt: string;
-    channelId: string;
-    title: string;
-    description: '';
+    publishedAt: string
+    channelId: string
+    title: string
+    description: ''
     thumbnails: {
       maxres: {
-        url: string;
-        width: number;
-        height: number;
-      };
-    };
-    channelTitle: string;
+        url: string
+        width: number
+        height: number
+      }
+    }
+    channelTitle: string
     localized: {
-      title: string;
-      description: '';
-    };
-  };
+      title: string
+      description: ''
+    }
+  }
 }
 
 interface PropTypes {
-  CoursesPlaylists: PlaylistItem[];
-  OtherPlaylists: PlaylistItem[];
+  CoursesPlaylists: PlaylistItem[]
+  OtherPlaylists: PlaylistItem[]
 }
 
 export default function Cursos({
   CoursesPlaylists,
-  OtherPlaylists,
+  OtherPlaylists
 }: PropTypes): JSX.Element {
   return (
     <>
@@ -126,7 +126,7 @@ export default function Cursos({
         </CourseList>
       </Container>
     </>
-  );
+  )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -135,36 +135,36 @@ export const getStaticProps: GetStaticProps = async () => {
       part: 'snippet',
       key: process.env.YOUTUBE_API_KEY,
       channelId: process.env.CHANNEL_ID,
-      maxResults: 50,
-    },
-  });
+      maxResults: 50
+    }
+  })
 
-  const CoursesPlaylists: PlaylistItem[] = [];
-  const OtherPlaylists: PlaylistItem[] = [];
+  const CoursesPlaylists: PlaylistItem[] = []
+  const OtherPlaylists: PlaylistItem[] = []
 
   data.items.forEach((item: PlaylistItem) => {
     if (item.snippet.title.toLowerCase().includes('curso')) {
-      CoursesPlaylists.push(item);
+      CoursesPlaylists.push(item)
     } else {
-      OtherPlaylists.push(item);
+      OtherPlaylists.push(item)
     }
-  });
+  })
 
   CoursesPlaylists.forEach((item: PlaylistItem) => {
     item.slug = item.snippet.title
       .split('Curso de ')[1]
       .toLowerCase()
-      .replace(/ /g, '-');
-  });
+      .replace(/ /g, '-')
+  })
 
   OtherPlaylists.forEach((item: PlaylistItem) => {
-    item.slug = item.snippet.title.toLowerCase().replace(/ /g, '-');
-  });
+    item.slug = item.snippet.title.toLowerCase().replace(/ /g, '-')
+  })
 
   return {
     props: {
       CoursesPlaylists,
-      OtherPlaylists,
-    },
-  };
-};
+      OtherPlaylists
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.main`
   padding-top: 200px;
@@ -11,7 +11,7 @@ export const Container = styled.main`
     padding-top: 80px;
     width: 90vw;
   }
-`;
+`
 
 export const RightText = styled.section`
   margin-left: 60px;
@@ -56,13 +56,13 @@ export const RightText = styled.section`
       font-size: 19px;
     }
   }
-`;
+`
 
 export const Left = styled.figure`
   @media (max-width: 750px) {
     margin-bottom: 40px;
   }
-`;
+`
 
 export const Hello = styled.div`
   display: flex;
@@ -80,7 +80,7 @@ export const Hello = styled.div`
       width: 180px;
     }
   }
-`;
+`
 
 export const SocialMedia = styled.div`
   display: flex;
@@ -90,4 +90,4 @@ export const SocialMedia = styled.div`
   @media (max-width: 750px) {
     display: none;
   }
-`;
+`

@@ -1,32 +1,32 @@
-import { useCallback, useState } from 'react';
-import Head from 'next/head';
-import { ToastContainer, toast } from 'react-toastify';
-import { FaGithub, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';
-import { GrMail } from 'react-icons/gr';
+import { useCallback, useState } from 'react'
+import Head from 'next/head'
+import { ToastContainer, toast } from 'react-toastify'
+import { FaGithub, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa'
+import { GrMail } from 'react-icons/gr'
 
 import {
   Container,
   SocialMedia,
   CopyToClipBoard,
   Contact,
-  Form,
-} from '../styles/contato/styles';
+  Form
+} from '../styles/contato/styles'
 
 export default function Contato(): JSX.Element {
-  const [loading, setLoading] = useState(0);
+  const [loading, setLoading] = useState(0)
 
   const onHandleSubmit = useCallback((event) => {
-    event.preventDefault();
+    event.preventDefault()
 
-    const inputs = document.getElementsByTagName('input');
-    const description = document.getElementsByTagName('textarea')[0].value;
+    const inputs = document.getElementsByTagName('input')
+    const description = document.getElementsByTagName('textarea')[0].value
 
     const formData = {
       name: inputs[0].value,
       email: inputs[1].value,
       subject: inputs[2].value,
-      description,
-    };
+      description
+    }
 
     if (
       formData.name === '' ||
@@ -45,10 +45,10 @@ export default function Contato(): JSX.Element {
         bodyStyle: {
           fontFamily: 'Source Sans Pro',
           fontSize: 18,
-          color: '#272727',
-        },
-      });
-      return;
+          color: '#272727'
+        }
+      })
+      return
     }
 
     toast.info('📤 Enviando e-mail...', {
@@ -59,15 +59,15 @@ export default function Contato(): JSX.Element {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      bodyStyle: { fontFamily: 'Source Sans Pro', fontSize: 20 },
-    });
+      bodyStyle: { fontFamily: 'Source Sans Pro', fontSize: 20 }
+    })
 
-    setLoading(1);
+    setLoading(1)
 
     fetch('https://formspree.io/xlepnwwb', {
       method: 'POST',
       headers: { Accept: 'application/json' },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(formData)
     })
       .then((response) => {
         if (response.status === 200) {
@@ -79,8 +79,8 @@ export default function Contato(): JSX.Element {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            bodyStyle: { fontFamily: 'Source Sans Pro', fontSize: 20 },
-          });
+            bodyStyle: { fontFamily: 'Source Sans Pro', fontSize: 20 }
+          })
         } else {
           toast.error('😓 Erro ao enviar o e-mail', {
             position: 'top-center',
@@ -90,17 +90,17 @@ export default function Contato(): JSX.Element {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            bodyStyle: { fontFamily: 'Source Sans Pro', fontSize: 20 },
-          });
+            bodyStyle: { fontFamily: 'Source Sans Pro', fontSize: 20 }
+          })
         }
 
         for (let i = 0; i < 3; i += 1) {
-          inputs[i].value = '';
+          inputs[i].value = ''
         }
 
-        document.getElementsByTagName('textarea')[0].value = '';
+        document.getElementsByTagName('textarea')[0].value = ''
 
-        setLoading(0);
+        setLoading(0)
       })
       .catch(() => {
         toast.error('😓 Erro ao enviar o e-mail', {
@@ -111,12 +111,12 @@ export default function Contato(): JSX.Element {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          bodyStyle: { fontFamily: 'Source Sans Pro', fontSize: 20 },
-        });
+          bodyStyle: { fontFamily: 'Source Sans Pro', fontSize: 20 }
+        })
 
-        setLoading(0);
-      });
-  }, []);
+        setLoading(0)
+      })
+  }, [])
 
   return (
     <>
@@ -198,5 +198,5 @@ export default function Contato(): JSX.Element {
         />
       </Container>
     </>
-  );
+  )
 }

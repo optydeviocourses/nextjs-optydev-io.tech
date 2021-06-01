@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.main`
   width: 80vw;
@@ -28,7 +28,7 @@ export const Container = styled.main`
   @media (max-width: 700px) {
     width: 90vw;
   }
-`;
+`
 
 export const Thumbnail = styled.div`
   height: 180px;
@@ -51,7 +51,7 @@ export const Thumbnail = styled.div`
   > p {
     color: #fff;
   }
-`;
+`
 
 export const CourseList = styled.div`
   display: grid;
@@ -70,17 +70,17 @@ export const CourseList = styled.div`
     grid-template-columns: 1fr;
     justify-items: center;
   }
-`;
+`
 
 export const Course = styled.div`
   span {
     font-size: 18px;
   }
-`;
+`
 
 export const Gold = styled.span`
   display: inline;
   color: #ebce00;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 32px;
-`;
+`

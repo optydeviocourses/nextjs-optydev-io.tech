@@ -1,7 +1,7 @@
-import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components'
 
 interface FormProps {
-  loading: number;
+  loading: number
 }
 
 export const Container = styled.main`
@@ -17,7 +17,7 @@ export const Container = styled.main`
     margin-top: 60px;
     margin-bottom: 15px;
   }
-`;
+`
 
 export const Contact = styled.section`
   display: flex;
@@ -46,7 +46,7 @@ export const Contact = styled.section`
       display: none;
     }
   }
-`;
+`
 
 export const SocialMedia = styled.aside`
   display: flex;
@@ -58,13 +58,13 @@ export const SocialMedia = styled.aside`
       font-size: 20px;
     }
   }
-`;
+`
 
 export const CopyToClipBoard = styled.div`
   display: flex;
   align-items: center;
   color: #fff;
-`;
+`
 
 export const Form = styled.form<FormProps>`
   input,
@@ -130,4 +130,4 @@ export const Form = styled.form<FormProps>`
       width: 288px;
     }
   }
-`;
+`

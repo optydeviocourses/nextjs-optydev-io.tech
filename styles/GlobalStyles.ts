@@ -1,11 +1,11 @@
 import {
   createGlobalStyle,
   css,
-  FlattenSimpleInterpolation,
-} from 'styled-components';
+  FlattenSimpleInterpolation
+} from 'styled-components'
 
 interface GlobalStyleProps {
-  lock: boolean;
+  lock: boolean
 }
 
 export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
@@ -142,4 +142,4 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
             color: #2dbf76;
           }
         `}
-`;
+`

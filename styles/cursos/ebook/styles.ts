@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.section<{ top?: string }>`
   width: 80vw;
@@ -19,15 +19,15 @@ export const Container = styled.section<{ top?: string }>`
       padding-top: 20px;
     }
   }
-`;
+`
 
 export const Background = styled.div`
   background: linear-gradient(-7deg, transparent 30%, #25262a 30%);
-`;
+`
 
 export const SecondBackground = styled.div`
   background-color: #25262a;
-`;
+`
 
 export const MainFlex = styled.main`
   margin-bottom: 50px;
@@ -53,7 +53,7 @@ export const MainFlex = styled.main`
   @media (max-width: 700px) {
     margin-bottom: 0px;
   }
-`;
+`
 
 export const MiddleText = styled.div`
   margin-top: 40px;
@@ -93,7 +93,7 @@ export const MiddleText = styled.div`
       font-size: 20px;
     }
   }
-`;
+`
 
 export const RightText = styled.div`
   margin-left: 40px;
@@ -131,7 +131,7 @@ export const RightText = styled.div`
       font-size: 20px;
     }
   }
-`;
+`
 
 export const BigText = styled.div`
   margin-right: 40px;
@@ -182,7 +182,7 @@ export const BigText = styled.div`
       font-size: 24px;
     }
   }
-`;
+`
 
 export const Profile = styled.section`
   margin-top: 140px;
@@ -237,7 +237,7 @@ export const Profile = styled.section`
       margin-left: 0px;
     }
   }
-`;
+`
 
 export const Faq = styled.section`
   margin-top: 60px;
@@ -280,7 +280,7 @@ export const Faq = styled.section`
       font-size: 18px;
     }
   }
-`;
+`
 
 export const AlignButton = styled.div`
   margin-top: 80px;
@@ -294,4 +294,4 @@ export const AlignButton = styled.div`
     margin-top: 40px;
     margin-bottom: 20px;
   }
-`;
+`

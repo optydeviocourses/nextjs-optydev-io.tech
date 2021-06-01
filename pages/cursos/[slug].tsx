@@ -1,9 +1,9 @@
 /* eslint-disable no-param-reassign */
-import { GetStaticPaths, GetStaticProps } from 'next';
-import Head from 'next/head';
-import { useState, useCallback } from 'react';
-import { IoMdDownload } from 'react-icons/io';
-import PerfectScrollbar from 'react-perfect-scrollbar';
+import { GetStaticPaths, GetStaticProps } from 'next'
+import Head from 'next/head'
+import { useState, useCallback } from 'react'
+import { IoMdDownload } from 'react-icons/io'
+import PerfectScrollbar from 'react-perfect-scrollbar'
 
 import {
   Container,
@@ -13,87 +13,87 @@ import {
   FlexboxLeft,
   FlexboxRight,
   NextVideos,
-  NextVideoTitle,
-} from '../../styles/cursos/slug/styles';
-import api from '../../services/api';
+  NextVideoTitle
+} from '../../styles/cursos/slug/styles'
+import api from '../../services/api'
 
 interface PlaylistItem {
-  kind: string;
-  etag: string;
-  id: string;
-  slug?: string;
+  kind: string
+  etag: string
+  id: string
+  slug?: string
   snippet: {
-    publishedAt: string;
-    channelId: string;
-    title: string;
-    description: '';
+    publishedAt: string
+    channelId: string
+    title: string
+    description: ''
     thumbnails: {
       maxres: {
-        url: string;
-        width: number;
-        height: number;
-      };
-    };
-    channelTitle: string;
+        url: string
+        width: number
+        height: number
+      }
+    }
+    channelTitle: string
     localized: {
-      title: string;
-      description: '';
-    };
-  };
+      title: string
+      description: ''
+    }
+  }
 }
 
 interface Video {
-  playlistId?: string;
-  slidesLink?: string;
+  playlistId?: string
+  slidesLink?: string
   snippet: {
-    title: string;
-    mediumTitle: string;
-    shortTitle: string;
-    position: number;
-    description: string;
+    title: string
+    mediumTitle: string
+    shortTitle: string
+    position: number
+    description: string
     resourceId: {
-      videoId: string;
-    };
+      videoId: string
+    }
     thumbnails: {
       medium: {
-        url: string;
-      };
-    };
-  };
+        url: string
+      }
+    }
+  }
 }
 
 interface PathProps {
   params: {
-    slug: string;
-  };
+    slug: string
+  }
 }
 
 interface PropTypes {
-  data: Video[];
+  data: Video[]
   courseInfo: {
-    playlistId: string;
-    courseName: string;
-    slidesLink: string;
-  };
-  slug: string;
+    playlistId: string
+    courseName: string
+    slidesLink: string
+  }
+  slug: string
 }
 
 export default function VideoPlayer({
   data,
-  courseInfo,
+  courseInfo
 }: PropTypes): JSX.Element {
-  const [selectedVideo, setSelectedVideo] = useState<Video>(data[0]);
+  const [selectedVideo, setSelectedVideo] = useState<Video>(data[0])
 
   const changeVideo = useCallback(
     (id: number) => {
-      setSelectedVideo(data[id]);
+      setSelectedVideo(data[id])
       localStorage.setItem(
         `@bergdaniel:${courseInfo.playlistId}`,
         JSON.stringify(data[id])
-      );
+      )
     },
     [data, courseInfo.playlistId]
-  );
+  )
 
   return (
     <>
@@ -146,8 +146,8 @@ export default function VideoPlayer({
                   position,
                   thumbnails,
                   shortTitle,
-                  mediumTitle,
-                } = video.snippet;
+                  mediumTitle
+                } = video.snippet
                 return (
                   <Video
                     key={String(position)}
@@ -160,14 +160,14 @@ export default function VideoPlayer({
                     <h3>{shortTitle}</h3>
                     <h4>{mediumTitle}</h4>
                   </Video>
-                );
+                )
               })}
             </PerfectScrollbar>
           </NextVideos>
         </FlexboxRight>
       </Container>
     </>
-  );
+  )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -176,11 +176,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
       part: 'snippet',
       key: process.env.YOUTUBE_API_KEY,
       channelId: process.env.CHANNEL_ID,
-      maxResults: 50,
-    },
-  });
+      maxResults: 50
+    }
+  })
 
-  const AllPlaylists = [];
+  const AllPlaylists = []
 
   data.items.forEach((item: PlaylistItem) => {
     if (item.snippet.title.toLowerCase().includes('curso')) {
@@ -189,30 +189,30 @@ export const getStaticPaths: GetStaticPaths = async () => {
           slug: item.snippet.title
             .split('Curso de ')[1]
             .toLowerCase()
-            .replace(/ /g, '-'),
-        },
-      });
+            .replace(/ /g, '-')
+        }
+      })
     } else {
       AllPlaylists.push({
-        params: { slug: item.snippet.title.toLowerCase().replace(/ /g, '-') },
-      });
+        params: { slug: item.snippet.title.toLowerCase().replace(/ /g, '-') }
+      })
     }
-  });
+  })
 
-  return { paths: AllPlaylists, fallback: false };
-};
+  return { paths: AllPlaylists, fallback: false }
+}
 
 export const getStaticProps: GetStaticProps = async ({ params }: PathProps) => {
-  const mapSlugToProperties = {};
+  const mapSlugToProperties = {}
 
   const response = await api.get('/playlists', {
     params: {
       part: 'snippet',
       key: process.env.YOUTUBE_API_KEY,
       channelId: process.env.CHANNEL_ID,
-      maxResults: 50,
-    },
-  });
+      maxResults: 50
+    }
+  })
 
   response.data.items.forEach((item: PlaylistItem) => {
     if (item.snippet.title.toLowerCase().includes('curso')) {
@@ -224,59 +224,59 @@ export const getStaticProps: GetStaticProps = async ({ params }: PathProps) => {
       ] = {
         playlistId: item.id,
         courseName: item.snippet.title,
-        slidesLink: '',
-      };
+        slidesLink: ''
+      }
     } else {
       mapSlugToProperties[
         item.snippet.title.toLowerCase().replace(/ /g, '-')
       ] = {
         playlistId: item.id,
         courseName: item.snippet.title,
-        slidesLink: '',
-      };
+        slidesLink: ''
+      }
     }
-  });
+  })
 
   const { data } = await api.get('/playlistItems', {
     params: {
       part: 'snippet',
       key: process.env.YOUTUBE_API_KEY,
       maxResults: 50,
-      playlistId: mapSlugToProperties[params.slug].playlistId,
-    },
-  });
+      playlistId: mapSlugToProperties[params.slug].playlistId
+    }
+  })
 
   // COLOCAR AQUI O LINK DOS SLIDES DOS CURSOS (CASO EXISTA)
   mapSlugToProperties['javascript'].slidesLink =
-    'https://mega.nz/folder/cCRglawa#xS4MEA4NrhBgplCCLxqFDA';
+    'https://mega.nz/folder/cCRglawa#xS4MEA4NrhBgplCCLxqFDA'
   mapSlugToProperties['terminal-linux'].slidesLink =
-    'https://mega.nz/#F!AbAQEYBT!UYpnwXoXwjFcDhcf2ZXi3g';
+    'https://mega.nz/#F!AbAQEYBT!UYpnwXoXwjFcDhcf2ZXi3g'
 
   const filteredData: Video[] = data.items.filter(
     (video: Video) => video.snippet.title !== 'Private video'
-  );
+  )
 
   if (filteredData[0].snippet.title.includes('-')) {
     filteredData.forEach((element: Video) => {
-      const { title } = element.snippet;
-      const splitTitle = title.split('- ')[1];
-      const splitSplitTitle = splitTitle.split(':')[0];
+      const { title } = element.snippet
+      const splitTitle = title.split('- ')[1]
+      const splitSplitTitle = splitTitle.split(':')[0]
 
-      element.snippet.mediumTitle = splitTitle;
-      element.snippet.shortTitle = splitSplitTitle;
-    });
+      element.snippet.mediumTitle = splitTitle
+      element.snippet.shortTitle = splitSplitTitle
+    })
   } else {
     filteredData.forEach((element: Video) => {
       element.snippet.mediumTitle = element.snippet.shortTitle =
-        element.snippet.title;
-    });
+        element.snippet.title
+    })
   }
 
   return {
     props: {
       slug: params.slug,
       data: filteredData,
-      courseInfo: mapSlugToProperties[params.slug],
-    },
-  };
-};
+      courseInfo: mapSlugToProperties[params.slug]
+    }
+  }
+}

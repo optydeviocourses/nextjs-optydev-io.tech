@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.main`
   padding-top: 120px;
@@ -15,7 +15,7 @@ export const Container = styled.main`
   @media (max-width: 750px) {
     padding-top: 50px;
   }
-`;
+`
 
 export const ButtonsContainer = styled.div`
   padding-top: 40px;
@@ -26,7 +26,7 @@ export const ButtonsContainer = styled.div`
   a {
     margin-top: 20px;
   }
-`;
+`
 
 export const Button = styled.button<{ color?: string; fontColor?: string }>`
   display: flex;
@@ -44,4 +44,4 @@ export const Button = styled.button<{ color?: string; fontColor?: string }>`
     padding-left: 10px;
     color: ${(props) => props.fontColor || '#fff'};
   }
-`;
+`

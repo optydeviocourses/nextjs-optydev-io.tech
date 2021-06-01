@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-import { FaGithub, FaYoutube, FaDiscord } from 'react-icons/fa';
-import { BiBook } from 'react-icons/bi';
-import { BsFillLightningFill } from 'react-icons/bs';
+import React from 'react'
+import Link from 'next/link'
+import Head from 'next/head'
+import { FaGithub, FaYoutube, FaDiscord } from 'react-icons/fa'
+import { BiBook } from 'react-icons/bi'
+import { BsFillLightningFill } from 'react-icons/bs'
 
-import { Container, Button, ButtonsContainer } from '../styles/links/styles';
+import { Container, Button, ButtonsContainer } from '../styles/links/styles'
 
 const Home: React.FC = () => {
   return (
@@ -74,7 +74,7 @@ const Home: React.FC = () => {
         </ButtonsContainer>
       </Container>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

@@ -1,9 +1,9 @@
-# bergdaniel.com.br
+# optydev-io.tech
 
-This is the codebase for the new version of my personal website, made in next.js (the old one was made in React)
+This is the codebase for the new version of my personal website, made in next.js.
 
 ## Why Next.js?
 Because the SEO of a React website is **complete shit**
 
-## Old website
-The old website codebase can be found on https://github.com/danielbergholz/bergdaniel.com.br, and the live version on https://bergdaniel.netlify.app/
+# Porque Next.js ?
+Porque é o SEO para React website

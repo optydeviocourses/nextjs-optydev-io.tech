@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.main`
   width: 80vw;
@@ -16,7 +16,7 @@ export const Container = styled.main`
   @media (max-width: 900px) {
     margin: 30px auto 0 auto;
   }
-`;
+`
 
 export const Post = styled.article`
   max-width: 1200px;
@@ -45,7 +45,7 @@ export const Post = styled.article`
       margin: 0 auto;
     }
   }
-`;
+`
 
 export const Text = styled.section`
   h1 {
@@ -77,4 +77,4 @@ export const Text = styled.section`
       font-size: 16px;
     }
   }
-`;
+`
