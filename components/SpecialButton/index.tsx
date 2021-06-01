@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import { StyledButton } from './styles';
+import { StyledButton } from './styles'
 
 interface ButtonProps {
-  link?: string;
+  link?: string
 }
 
 const SpecialButton: React.FC<ButtonProps> = ({ children, link }) => {
@@ -12,9 +12,9 @@ const SpecialButton: React.FC<ButtonProps> = ({ children, link }) => {
       <a href={link} target="_blank" rel="noopener noreferrer">
         <StyledButton type="button">{children}</StyledButton>
       </a>
-    );
+    )
   }
-  return <StyledButton type="button">{children}</StyledButton>;
-};
+  return <StyledButton type="button">{children}</StyledButton>
+}
 
-export default SpecialButton;
+export default SpecialButton

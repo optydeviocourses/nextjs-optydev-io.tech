@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 interface ContainerProps {
-  tab: number;
-  isOpen: boolean;
+  tab: number
+  isOpen: boolean
 }
 
 export const Background = styled.header`
@@ -21,7 +21,7 @@ export const Background = styled.header`
     animation-name: loadAnimation;
     animation-duration: 150ms;
   }
-`;
+`
 
 export const MenuBar = styled.span`
   width: 30px;
@@ -30,7 +30,7 @@ export const MenuBar = styled.span`
   background-color: #fff;
   display: block;
   transition: all 150ms;
-`;
+`
 
 export const MenuIcon = styled.a<ContainerProps>`
   cursor: pointer;
@@ -54,7 +54,7 @@ export const MenuIcon = styled.a<ContainerProps>`
   @media (max-width: 950px) {
     display: block;
   }
-`;
+`
 
 export const Container = styled.div<ContainerProps>`
   margin: 0 auto;
@@ -122,4 +122,4 @@ export const Container = styled.div<ContainerProps>`
       margin-left: 0;
     }
   }
-`;
+`

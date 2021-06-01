@@ -1,55 +1,55 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { FaSun } from 'react-icons/fa';
-import { FaMoon } from 'react-icons/fa';
+import React, { useState, useCallback, useEffect } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { FaSun } from 'react-icons/fa'
+import { FaMoon } from 'react-icons/fa'
 
-import { useTheme } from '../../context/theme';
-import { Background, Container, MenuIcon, MenuBar } from './styles';
+import { useTheme } from '../../context/theme'
+import { Background, Container, MenuIcon, MenuBar } from './styles'
 
 const NavBar: React.FC = () => {
-  const [open, setOpen] = useState<boolean>(false);
-  const [tab, setTab] = useState<number>(0);
+  const [open, setOpen] = useState<boolean>(false)
+  const [tab, setTab] = useState<number>(0)
 
-  const { pathname } = useRouter();
-  const { changeTheme, theme, lock } = useTheme();
+  const { pathname } = useRouter()
+  const { changeTheme, theme, lock } = useTheme()
 
   const handleOpen = useCallback(
     (close = false): void => {
       if (close) {
-        setOpen(false);
-        setTab(0);
-        lock(false);
+        setOpen(false)
+        setTab(0)
+        lock(false)
       } else {
-        setOpen(!open);
-        lock(true);
+        setOpen(!open)
+        lock(true)
       }
     },
     [open, lock]
-  );
+  )
 
   const handleNewTab = useCallback(
     (n: number): void => {
-      setOpen(false);
-      setTab(n);
-      lock(false);
+      setOpen(false)
+      setTab(n)
+      lock(false)
     },
     [lock]
-  );
+  )
 
   useEffect(() => {
     if (pathname === '/contato') {
-      handleNewTab(5);
+      handleNewTab(5)
     } else if (pathname === '/portfolio') {
-      handleNewTab(4);
+      handleNewTab(4)
     } else if (pathname === '/blog') {
-      handleNewTab(3);
+      handleNewTab(3)
     } else if (pathname === '/cursos') {
-      handleNewTab(2);
+      handleNewTab(2)
     } else {
-      handleOpen(true);
+      handleOpen(true)
     }
-  }, [pathname]);
+  }, [pathname])
 
   return (
     <Background>
@@ -57,7 +57,7 @@ const NavBar: React.FC = () => {
         <Link href="/">
           <a>
             <p>
-              <strong>Daniel</strong> Bergholz
+              <strong>optydev-io.tech</strong>
             </p>
           </a>
         </Link>
@@ -95,7 +95,7 @@ const NavBar: React.FC = () => {
         </ul>
       </Container>
     </Background>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

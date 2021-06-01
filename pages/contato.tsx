@@ -12,6 +12,10 @@ import {
   Form
 } from '../styles/contato/styles'
 
+const blogName = process.env.BLOG_NAME || ''
+const blogContexts = process.env.BLOG_CONTEXT || ''
+const appUrl = process.env.APP_URL || ''
+
 export default function Contato(): JSX.Element {
   const [loading, setLoading] = useState(0)
 
@@ -121,23 +125,20 @@ export default function Contato(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Contato | Daniel Berg</title>
+        <title>Contato | {blogName}</title>
         <meta name="og:title" property="og:title" content="Entre em contato" />
         <meta
           name="description"
-          content="E-mail, YouTube, Instagram, GitHub e LinkedIn do Daniel Bergholz"
+          content="E-mail, YouTube, Instagram, GitHub e LinkedIn optydev-io.tech"
         />
       </Head>
       <Container>
         <Contact>
-          <img
-            src="/assets/foto_perfil.png"
-            alt="Foto de perfil Daniel Bergholz"
-          />
+          <img src="/assets/logo.png" alt="optydev-io.tech" />
           <SocialMedia>
             <CopyToClipBoard>
               <GrMail size={30} />
-              <p id="clipboard">bergholz.daniel@gmail.com</p>
+              <p id="clipboard">{blogName}</p>
             </CopyToClipBoard>
             <a
               href="https://www.linkedin.com/in/daniel-gobbi-bergholz-752379149"
@@ -145,31 +146,31 @@ export default function Contato(): JSX.Element {
               rel="noopener noreferrer"
             >
               <FaLinkedin size={30} />
-              <p>Daniel Gobbi Bergholz</p>
+              <p> {blogName}</p>
             </a>
             <a
-              href="https://www.github.com/danielbergholz"
+              href="https://www.github.com/optydev.io.courses"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaGithub size={30} />
-              <p>danielbergholz</p>
+              <p>{blogName}</p>
             </a>
             <a
-              href="https://www.youtube.com/channel/UCnmbV9eyMwIl50Ji1ObFxqg"
+              href="https://www.youtube.com/channel/UCaA6KIbCHhg4_Te1ef-ilZA"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaYoutube size={30} />
-              <p>Daniel Berg</p>
+              <p>{blogName}</p>
             </a>
             <a
-              href="https://www.instagram.com/berg.dev/"
+              href="https://www.instagram.com/optydev-io.tech/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaInstagram size={30} />
-              <p>@berg.dev</p>
+              <p>@{blogName}</p>
             </a>
           </SocialMedia>
         </Contact>

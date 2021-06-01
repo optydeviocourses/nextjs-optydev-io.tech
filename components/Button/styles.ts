@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 interface ButtonProps {
-  backgroundColor?: string;
-  backgroundHoverColor?: string;
-  color?: string;
+  backgroundColor?: string
+  backgroundHoverColor?: string
+  color?: string
 }
 
 export const StyledButton = styled.button<ButtonProps>`
@@ -29,4 +29,4 @@ export const StyledButton = styled.button<ButtonProps>`
   @media (max-width: 700px) {
     font-size: 19px;
   }
-`;
+`

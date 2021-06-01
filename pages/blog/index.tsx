@@ -9,6 +9,9 @@ import { Container, Post, Text } from '../../styles/blog/styles'
 import ApiSearchResponse from 'prismic-javascript/types/ApiSearchResponse'
 // import { Document } from 'prismic-javascript/types/documents';
 
+const blogName = process.env.BLOG_NAME
+const blogContexts = process.env.BLOG_CONTEXT
+
 interface PropTypes {
   posts: ApiSearchResponse
   // home: Document;
@@ -18,12 +21,9 @@ export default function Blog({ posts }: PropTypes): JSX.Element {
   return (
     <>
       <Head>
-        <title>Blog | optydev-io.tech</title>
+        <title>Blog |${blogName}</title>
         <meta name="og:title" property="og:title" content="Blog" />
-        <meta
-          name="description"
-          content="Blog sobre conteúdos de DevOps, FullStack e FullCicle"
-        />
+        <meta name="description" content="${blogContexts}" />
       </Head>
       <Container>
         {posts.results.map((post) => (

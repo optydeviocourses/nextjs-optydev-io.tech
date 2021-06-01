@@ -2,6 +2,9 @@ import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import Head from 'next/head'
 
+const blogContexts = process.env.BLOG_CONTEXT
+const blogName = process.env.BLOG_NAME
+
 import api from '../../services/api'
 import {
   Container,
@@ -48,7 +51,7 @@ export default function Cursos({
   return (
     <>
       <Head>
-        <title>Cursos | Daniel Berg</title>
+        <title>Cursos | ${blogName}</title>
         <meta
           name="og:title"
           property="og:title"

@@ -17,33 +17,30 @@ export default function Home(): JSX.Element {
         <meta name="og:title" property="og:title" content="optydev-io.tech" />
         <meta
           name="description"
-          content="optydev-io.tech tudo em DevOps, FullDtack, FullCicleWeb e Fullstack"
+          content="optydev-io.tech tudo em DevOps, FullStack e FullCicle"
         />
       </Head>
       <Container>
         <Hello>
           <Left>
-            <img
-              src="/assets/foto_perfil.png"
-              alt="Foto de perfil Daniel Bergholz"
-            />
+            <img src="/assets/logo.png" alt="Logo da optydev-io.tech" />
             <SocialMedia>
               <a
-                href="https://www.youtube.com/channel/UCnmbV9eyMwIl50Ji1ObFxqg/videos?view_as=subscriber"
+                href="https://www.youtube.com/channel/UCaA6KIbCHhg4_Te1ef-ilZA/videos?view_as=subscriber"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaYoutube size={36} />
               </a>
               <a
-                href="https://www.instagram.com/berg.dev/"
+                href="https://www.instagram.com/optydev-io.tech/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaInstagram size={36} />
               </a>
               <a
-                href="https://www.github.com/danielbergholz"
+                href="https://www.github.com/optydev.io.courses"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -52,13 +49,10 @@ export default function Home(): JSX.Element {
             </SocialMedia>
           </Left>
           <RightText>
-            <h1>Fullstack Developer</h1>
-            <h2>
-              Trabalho no desenvolvimento de aplicações web performáticas e com
-              foco na experiência de usuário
-            </h2>
+            <h1>DevOps, FullStack e FullCicle</h1>
+            <h2>Consultoria, Treinamento e Soluções em TI.</h2>
             <p id="green-text">
-              Tecnologias que já utilizei: Node, Adonis, React, Gatsby e Next
+              Tecnologias: DevOps, FullStack, nocode, lowcode e highcode.
             </p>
           </RightText>
         </Hello>

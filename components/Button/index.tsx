@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-import { StyledButton } from './styles';
+import { StyledButton } from './styles'
 
 interface ButtonProps {
-  link?: string;
-  backgroundColor?: string;
-  backgroundHoverColor?: string;
-  color?: string;
+  link?: string
+  backgroundColor?: string
+  backgroundHoverColor?: string
+  color?: string
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({
   link,
   backgroundColor,
   backgroundHoverColor,
-  color,
+  color
 }) => {
   if (link) {
     return (
@@ -28,9 +28,9 @@ const Button: React.FC<ButtonProps> = ({
           {children}
         </StyledButton>
       </a>
-    );
+    )
   }
-  return <StyledButton type="button">{children}</StyledButton>;
-};
+  return <StyledButton type="button">{children}</StyledButton>
+}
 
-export default Button;
+export default Button

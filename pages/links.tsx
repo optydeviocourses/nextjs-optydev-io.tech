@@ -12,17 +12,17 @@ const Home: React.FC = () => {
     <>
       <Head>
         <title>Links | Daniel Berg</title>
-        <meta name="og:title" property="og:title" content="Daniel Bergholz" />
+        <meta name="og:title" property="og:title" content="optydev-io.tech" />
         <meta
           name="description"
           content="Links de YouTube, canal do Discord, GitHub e cursos"
         />
       </Head>
       <Container>
-        <img src="/assets/berg.png" alt="Foto de perfil Berg" />
+        <img src="/assets/logo.png" alt="optydev-io.tech" />
         <ButtonsContainer>
           <a
-            href="https://www.youtube.com/channel/UCnmbV9eyMwIl50Ji1ObFxqg/videos"
+            href="https://www.youtube.com/channel/UCaA6KIbCHhg4_Te1ef-ilZA/videos"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -62,7 +62,7 @@ const Home: React.FC = () => {
           </Link>
 
           <a
-            href="https://www.github.com/danielbergholz"
+            href="https://www.github.com/optydev.io.courses"
             target="_blank"
             rel="noopener noreferrer"
           >

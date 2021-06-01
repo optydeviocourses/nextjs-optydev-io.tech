@@ -7,6 +7,10 @@ import Document, {
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
+const appUrl = process.env.APP_URL
+const blogContexts = process.env.BLOG_CONTEXT
+const blogName = process.env.BLOG_NAME
+
 interface ReturnType {
   styles: JSX.Element
   html: string
@@ -45,7 +49,7 @@ export default class MyDocument extends Document {
       <Html lang="pt-br">
         <Head>
           <link rel="shortcut icon" href="/logo.ico" type="image/x-icon" />
-          <link rel="canonical" href="https://bergdaniel.com.br/" />
+          <link rel="canonical" href="${appUrl}" />
           <meta property="og:image" content="/logo.ico" />
           <meta property="og:type" content="website" />
           <link
