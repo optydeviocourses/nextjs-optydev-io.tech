@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { FaGithub, FaYoutube } from 'react-icons/fa'
 
-import { Container, ButtonContainer } from '../../styles/portfolio/aws/styles'
+import { Container, ButtonContainer } from '../../styles/portfolio/_aws/styles'
 import Button from '../../components/Button'
 
 export default function aws(): JSX.Element {

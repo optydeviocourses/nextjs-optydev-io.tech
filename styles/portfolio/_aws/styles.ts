@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.main`
   width: 80vw;
@@ -53,8 +53,8 @@ export const Container = styled.main`
       text-align: left;
     }
   }
-`;
+`
 
 export const ButtonContainer = styled.div`
   margin: 30px auto 30px auto;
-`;
+`
