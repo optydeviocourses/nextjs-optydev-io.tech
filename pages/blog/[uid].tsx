@@ -10,6 +10,12 @@ import Button from '../../components/Button'
 import { Container, AspectRatio } from '../../styles/blog/uid/styles'
 import { client } from '../../utils/prismic-configuration'
 
+const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
+const blogContexts =
+  process.env.BLOG_CONTEXT ||
+  'Blog sobre conteúdos de DevOps, FullStack e FullCicle'
+const appUrl = process.env.APP_URL || 'https://optydev-io.tech'
+
 interface PathProps {
   params: {
     uid: string
@@ -24,7 +30,9 @@ export default function BlogPost({ post }: PropTypes): JSX.Element {
   return (
     <>
       <Head>
-        <title>{RichText.asText(post.data.title)} | Blog | Daniel Berg</title>
+        <title>
+          {RichText.asText(post.data.title)} | Blog | {blogName}{' '}
+        </title>
         <meta
           name="og:title"
           property="og:title"
@@ -38,6 +46,7 @@ export default function BlogPost({ post }: PropTypes): JSX.Element {
       <Container>
         {RichText.render(post.data.title)}
         <span>{post.data.formattedDate}</span>
+
         {post?.data?.video_id && (
           <AspectRatio>
             <iframe
@@ -55,12 +64,13 @@ export default function BlogPost({ post }: PropTypes): JSX.Element {
         <Link href="/blog">
           <a>
             <Button>
-              <MdArrowBack size={25} color="#fff" />
+              <MdArrowBack size={12} color="#fff" />
               Voltar
             </Button>
           </a>
         </Link>
       </Container>
+      <b></b>
     </>
   )
 }

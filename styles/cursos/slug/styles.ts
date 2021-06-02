@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.main`
   width: 80vw;
@@ -16,7 +16,7 @@ export const Container = styled.main`
   @media (max-width: 700px) {
     width: 90vw;
   }
-`;
+`
 
 export const FlexboxLeft = styled.section`
   width: 1280px;
@@ -146,7 +146,7 @@ export const FlexboxLeft = styled.section`
       text-align: center;
     }
   }
-`;
+`
 
 export const FlexboxRight = styled.aside`
   margin-left: 15px;
@@ -179,7 +179,7 @@ export const FlexboxRight = styled.aside`
   @media (max-width: 440px) {
     width: 320px;
   }
-`;
+`
 
 export const NextVideoTitle = styled.div`
   background-color: #25262a;
@@ -197,7 +197,7 @@ export const NextVideoTitle = styled.div`
       font-size: 16px;
     }
   }
-`;
+`
 
 export const NextVideos = styled.div`
   border-bottom-left-radius: 5px;
@@ -228,7 +228,7 @@ export const NextVideos = styled.div`
   @media (max-width: 1060px) {
     height: 480px;
   }
-`;
+`
 
 export const Video = styled.div`
   cursor: pointer;
@@ -287,7 +287,7 @@ export const Video = styled.div`
       display: block;
     }
   }
-`;
+`
 
 export const UpperTitle = styled.div`
   height: 38px;
@@ -316,7 +316,7 @@ export const UpperTitle = styled.div`
       font-size: 16px;
     }
   }
-`;
+`
 
 export const Download = styled.div`
   display: flex;
@@ -342,4 +342,4 @@ export const Download = styled.div`
       display: none;
     }
   }
-`;
+`

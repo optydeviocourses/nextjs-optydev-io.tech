@@ -7,6 +7,12 @@ import { FaMoon } from 'react-icons/fa'
 import { useTheme } from '../../context/theme'
 import { Background, Container, MenuIcon, MenuBar } from './styles'
 
+const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
+const blogContexts =
+  process.env.BLOG_CONTEXT ||
+  'Blog sobre conteúdos de DevOps, FullStack e FullCicle'
+const appUrl = process.env.APP_URL || 'https://optydev-io.tech'
+
 const NavBar: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false)
   const [tab, setTab] = useState<number>(0)
@@ -39,13 +45,13 @@ const NavBar: React.FC = () => {
 
   useEffect(() => {
     if (pathname === '/contato') {
-      handleNewTab(5)
-    } else if (pathname === '/portfolio') {
       handleNewTab(4)
-    } else if (pathname === '/blog') {
+    } else if (pathname === '/portfolio') {
       handleNewTab(3)
-    } else if (pathname === '/cursos') {
+    } else if (pathname === '/blog') {
       handleNewTab(2)
+    } else if (pathname === '/cursos') {
+      handleNewTab(1)
     } else {
       handleOpen(true)
     }
@@ -57,7 +63,7 @@ const NavBar: React.FC = () => {
         <Link href="/">
           <a>
             <p>
-              <strong>optydev-io.tech</strong>
+              <strong>{blogName}</strong>
             </p>
           </a>
         </Link>
@@ -65,13 +71,9 @@ const NavBar: React.FC = () => {
           <MenuBar />
           <MenuBar />
           <MenuBar />
+          <MenuBar />
         </MenuIcon>
         <ul>
-          {theme === 'dark' ? (
-            <FaSun size={28} color="#F1FA8C" onClick={changeTheme} />
-          ) : (
-            <FaMoon size={22} color="#F1FA8C" onClick={changeTheme} />
-          )}
           <li>
             <Link href="/cursos">
               <a>cursos</a>
@@ -92,6 +94,12 @@ const NavBar: React.FC = () => {
               <a>contato</a>
             </Link>
           </li>
+          <li></li>
+          {theme === 'dark' ? (
+            <FaSun size={28} color="#F1FA8C" onClick={changeTheme} />
+          ) : (
+            <FaMoon size={22} color="#F1FA8C" onClick={changeTheme} />
+          )}
         </ul>
       </Container>
     </Background>

@@ -2,8 +2,18 @@ import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import Head from 'next/head'
 
-const blogContexts = process.env.BLOG_CONTEXT
-const blogName = process.env.BLOG_NAME
+const appTema = process.env.APP_TEMA || 'DevOps, FullStack e FullCicle.'
+const appContexts =
+  process.env.APP_CONTEXTS || 'Consultoria, Treinamento e Soluções em TI.'
+const appMissao =
+  process.env.APP_MISSAO ||
+  'Tecnologias: DevOps, FullStack, nocode, lowcode e highcode.'
+
+const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
+
+const githubConta = process.env.GITHUB_CONTA
+const instagraConta = process.env.INSTAGRAM_CONTA
+const youtubeConta = process.env.YOUTUBE_CONTA
 
 import api from '../../services/api'
 import {
@@ -57,36 +67,36 @@ export default function Cursos({
           property="og:title"
           content="Cursos e tutoriais"
         />
-        <meta
-          name="description"
-          content="Cursos gratuitos de Trello, Linux e Desenvolvimento Web focado em tecnologias javascript"
-        />
+        <meta name="description" content={appContexts} />
       </Head>
       <Container>
         <h1>
-          Conteúdos
-          <Gold> premium</Gold>
+          Conteúdos<Gold> premium</Gold>
         </h1>
         <CourseList>
           <Course>
-            <Link href="/cursos/o-guia-do-dev-frontend">
+            <Link href="/cursos/">
               <a>
-                <Thumbnail>
-                  <img
-                    src="/assets/o_guia_do_dev_frontend.png"
-                    alt="O guia do desenvolvedor frontend"
-                  />
+                <Thumbnail id="thumbnail">
+                  <p>Arquiteturas</p>
                 </Thumbnail>
               </a>
             </Link>
-            <span>E-book: O Guia do Dev Frontend</span>
+            <span>{appContexts}</span>
           </Course>
 
           <Course>
             <Thumbnail id="thumbnail">
-              <p>em breve</p>
+              <p>Em breve</p>
             </Thumbnail>
-            <span>Curso de React</span>
+            <span>Curso de Nextjs</span>
+          </Course>
+
+          <Course>
+            <Thumbnail id="thumbnail">
+              <p>Em breve</p>
+            </Thumbnail>
+            <span>Curso de Serverless</span>
           </Course>
         </CourseList>
 
@@ -98,7 +108,7 @@ export default function Cursos({
                 <a>
                   <Thumbnail>
                     <img
-                      src={playlist.snippet.thumbnails.maxres.url}
+                      src={playlist.snippet.thumbnails.default.url}
                       alt={playlist.snippet.title}
                     />
                   </Thumbnail>
@@ -117,7 +127,7 @@ export default function Cursos({
                 <a>
                   <Thumbnail>
                     <img
-                      src={playlist.snippet.thumbnails.maxres.url}
+                      src={playlist.snippet.thumbnails.default.url}
                       alt={playlist.snippet.title}
                     />
                   </Thumbnail>

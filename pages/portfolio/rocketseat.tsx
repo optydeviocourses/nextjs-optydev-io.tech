@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { MdArrowBack } from 'react-icons/md';
 import Button from '../../components/Button';
-import { Container } from '../../styles/portfolio/rocketseat/styles';
+import { Container } from '../../styles/portfolio/serverless/styles';
 
 export default function Rocketseat(): JSX.Element {
   return (

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 90vw;
@@ -17,4 +17,4 @@ export const Container = styled.div`
   button {
     margin: 30px auto 30px auto;
   }
-`;
+`

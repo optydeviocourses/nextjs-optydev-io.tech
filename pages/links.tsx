@@ -7,22 +7,34 @@ import { BsFillLightningFill } from 'react-icons/bs'
 
 import { Container, Button, ButtonsContainer } from '../styles/links/styles'
 
+const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
+
+const blogContexts =
+  process.env.BLOG_CONTEXT ||
+  'Blog sobre conteúdos de DevOps, FullStack e FullCicle'
+
+const appUrl = process.env.APP_URL || 'https://optydev-io.tech'
+
+const youtubeKeyApi =
+  process.env.YOUTUBE_KEY_API || 'AIzaSyADjNYcvAla-UQxvyqBUXlR1mzEVkHiTrk'
+
+const channelId = process.env.CHANNEL_ID || 'UCaA6KIbCHhg4_Te1ef-ilZA'
+
+const githubConta = process.env.GITHUB_CONTA || 'optydev.io.courses'
+
 const Home: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Links | Daniel Berg</title>
-        <meta name="og:title" property="og:title" content="optydev-io.tech" />
-        <meta
-          name="description"
-          content="Links de YouTube, canal do Discord, GitHub e cursos"
-        />
+        <title>Links | {blogName}</title>
+        <meta name="og:title" property="og:title" content="{ blogName }" />
+        <meta name="description" content="{ blogContexts }" />
       </Head>
       <Container>
-        <img src="/assets/logo.png" alt="optydev-io.tech" />
+        <img src="/assets/logo.png" alt="{blogName}" />
         <ButtonsContainer>
           <a
-            href="https://www.youtube.com/channel/UCaA6KIbCHhg4_Te1ef-ilZA/videos"
+            href="https://www.youtube.com/channel/{ channelId }/videos"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -62,7 +74,7 @@ const Home: React.FC = () => {
           </Link>
 
           <a
-            href="https://www.github.com/optydev.io.courses"
+            href="https://www.github.com/{ githubConta }"
             target="_blank"
             rel="noopener noreferrer"
           >

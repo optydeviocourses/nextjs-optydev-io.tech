@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.main`
   width: 80vw;
@@ -44,7 +44,7 @@ export const Container = styled.main`
       margin: 10px auto 0 auto;
     }
   }
-`;
+`
 
 export const Project = styled.section`
   display: flex;
@@ -58,9 +58,9 @@ export const Project = styled.section`
   }
 
   img {
-    width: 165px;
-    height: 157px;
-    border-radius: 6px;
+    width: 200px;
+    height: 1-0px;
+    border-radius: 10px;
     display: inline;
     margin-right: 15px;
   }
@@ -74,14 +74,14 @@ export const Project = styled.section`
 
     img {
       margin: 0 auto;
-      width: 125px;
-      height: 119px;
+      width: 190px;
+      height: 120px;
     }
   }
-`;
+`
 
 export const Text = styled.aside`
   @media (max-width: 700px) {
     margin: 10px 0 10px 0;
   }
-`;
+`

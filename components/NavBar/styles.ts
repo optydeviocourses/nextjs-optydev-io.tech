@@ -29,7 +29,7 @@ export const MenuBar = styled.span`
   border-radius: 1px;
   background-color: #fff;
   display: block;
-  transition: all 150ms;
+  transition: all 100ms;
 `
 
 export const MenuIcon = styled.a<ContainerProps>`

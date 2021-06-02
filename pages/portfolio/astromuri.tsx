@@ -4,7 +4,7 @@ import { FaAndroid } from 'react-icons/fa';
 import {
   Container,
   ButtonContainer,
-} from '../../styles/portfolio/astromuri/styles';
+} from '../../styles/portfolio/aws/styles';
 import Button from '../../components/Button';
 
 export default function AstroMuri(): JSX.Element {

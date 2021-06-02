@@ -12,9 +12,11 @@ import {
   Form
 } from '../styles/contato/styles'
 
-const blogName = process.env.BLOG_NAME || ''
-const blogContexts = process.env.BLOG_CONTEXT || ''
-const appUrl = process.env.APP_URL || ''
+const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
+const blogContexts =
+  process.env.BLOG_CONTEXT ||
+  'Blog sobre conteúdos de DevOps, FullStack e FullCicle'
+const appUrl = process.env.APP_URL || 'https://optydev-io.tech'
 
 export default function Contato(): JSX.Element {
   const [loading, setLoading] = useState(0)
@@ -127,10 +129,7 @@ export default function Contato(): JSX.Element {
       <Head>
         <title>Contato | {blogName}</title>
         <meta name="og:title" property="og:title" content="Entre em contato" />
-        <meta
-          name="description"
-          content="E-mail, YouTube, Instagram, GitHub e LinkedIn optydev-io.tech"
-        />
+        <meta name="description" content="{ blogCOntexts }" />
       </Head>
       <Container>
         <Contact>
