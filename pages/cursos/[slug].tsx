@@ -262,10 +262,8 @@ export const getStaticProps: GetStaticProps = async ({ params }: PathProps) => {
   })
 
   // COLOCAR AQUI O LINK DOS SLIDES DOS CURSOS (CASO EXISTA)
-  mapSlugToProperties['javascript'].slidesLink =
-    'https://mega.nz/folder/cCRglawa#xS4MEA4NrhBgplCCLxqFDA'
-  mapSlugToProperties['terminal-linux'].slidesLink =
-    'https://mega.nz/#F!AbAQEYBT!UYpnwXoXwjFcDhcf2ZXi3g'
+  mapSlugToProperties['javascript'].slidesLink = ''
+  mapSlugToProperties['terminal-linux'].slidesLink = ''
 
   const filteredData: Video[] = data.items.filter(
     (video: Video) => video.snippet.title !== 'Private video'
