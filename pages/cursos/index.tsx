@@ -71,7 +71,7 @@ export default function Cursos({
   return (
     <>
       <Head>
-        <title>Cursos | ${blogName}</title>
+        <title>Cursos | {blogName}</title>
         <meta
           name="og:title"
           property="og:title"
