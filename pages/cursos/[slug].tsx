@@ -16,6 +16,7 @@ import {
   NextVideoTitle
 } from '../../styles/cursos/slug/styles'
 import api from '../../services/api'
+import { exception } from 'console'
 
 interface PlaylistItem {
   kind: string
@@ -58,8 +59,8 @@ interface PlaylistItem {
 }
 
 interface Video {
-  playlistId?: string
-  slidesLink?: string
+  playlistId: string
+  //slidesLink: string
   snippet: {
     title: string
     mediumTitle: string
@@ -70,6 +71,9 @@ interface Video {
       videoId: string
     }
     thumbnails: {
+      default: {
+        url: string
+      }
       medium: {
         url: string
       }
@@ -88,7 +92,7 @@ interface PropTypes {
   courseInfo: {
     playlistId: string
     courseName: string
-    slidesLink: string
+    //slidesLink: string
   }
   slug: string
 }
@@ -103,7 +107,7 @@ export default function VideoPlayer({
     (id: number) => {
       setSelectedVideo(data[id])
       localStorage.setItem(
-        `@bergdaniel:${courseInfo.playlistId}`,
+        `@optydeviodevops:${courseInfo.playlistId}`,
         JSON.stringify(data[id])
       )
     },
@@ -113,7 +117,9 @@ export default function VideoPlayer({
   return (
     <>
       <Head>
-        <title>{courseInfo.courseName} | Daniel Berg</title>
+        <title>
+          {courseInfo.courseName} | {process.env.BLOG_NAME}
+        </title>
         <meta
           name="og:title"
           property="og:title"
@@ -128,7 +134,7 @@ export default function VideoPlayer({
             <h2>
               {selectedVideo.snippet.mediumTitle || selectedVideo.snippet.title}
             </h2>
-            {courseInfo.slidesLink !== '' && (
+            {/* {courseInfo.slidesLink !== '' && (
               <a
                 href={courseInfo.slidesLink}
                 target="_blank"
@@ -139,7 +145,7 @@ export default function VideoPlayer({
                   <IoMdDownload color="#F1FA8C" size={20} />
                 </Download>
               </a>
-            )}
+            )} */}
           </UpperTitle>
           <iframe
             title="videoPlayer"
@@ -168,10 +174,7 @@ export default function VideoPlayer({
                     key={String(position)}
                     onClick={(): void => changeVideo(position)}
                   >
-                    <img
-                      src={thumbnails.medium.url}
-                      alt={video.snippet.title}
-                    />
+                    <img src={thumbnails.medium} alt={video.snippet.title} />
                     <h3>{shortTitle}</h3>
                     <h4>{mediumTitle}</h4>
                   </Video>
@@ -238,16 +241,16 @@ export const getStaticProps: GetStaticProps = async ({ params }: PathProps) => {
           .replace(/ /g, '-')
       ] = {
         playlistId: item.id,
-        courseName: item.snippet.title,
-        slidesLink: ''
+        courseName: item.snippet.title
+        // slidesLink: ''
       }
     } else {
       mapSlugToProperties[
         item.snippet.title.toLowerCase().replace(/ /g, '-')
       ] = {
         playlistId: item.id,
-        courseName: item.snippet.title,
-        slidesLink: ''
+        courseName: item.snippet.title
+        //slidesLink: ''
       }
     }
   })
@@ -262,27 +265,29 @@ export const getStaticProps: GetStaticProps = async ({ params }: PathProps) => {
   })
 
   // COLOCAR AQUI O LINK DOS SLIDES DOS CURSOS (CASO EXISTA)
-  mapSlugToProperties['javascript'].slidesLink = ''
-  mapSlugToProperties['terminal-linux'].slidesLink = ''
+  // mapSlugToProperties['els'].slidesLink = process.env.SLIDE_ESL
 
   const filteredData: Video[] = data.items.filter(
     (video: Video) => video.snippet.title !== 'Private video'
   )
 
-  if (filteredData[0].snippet.title.includes('-')) {
-    filteredData.forEach((element: Video) => {
-      const { title } = element.snippet
-      const splitTitle = title.split('- ')[1]
-      const splitSplitTitle = splitTitle.split(':')[0]
+  try {
+    if (filteredData[0].snippet.title.includes('-')) {
+      filteredData.forEach((element: Video) => {
+        const { title } = element.snippet
+        const splitTitle = title.split('- ')[1]
+        const splitSplitTitle = splitTitle.split(':')[0]
 
-      element.snippet.mediumTitle = splitTitle
-      element.snippet.shortTitle = splitSplitTitle
-    })
-  } else {
-    filteredData.forEach((element: Video) => {
-      element.snippet.mediumTitle = element.snippet.shortTitle =
-        element.snippet.title
-    })
+        element.snippet.mediumTitle = splitTitle
+        element.snippet.shortTitle = splitSplitTitle
+      })
+    } else {
+      filteredData.forEach((element: Video) => {
+        element.snippet.mediumTitle = element.snippet.shortTitle =
+          element.snippet.title
+      })
+    }
+  } finally {
   }
 
   return {
