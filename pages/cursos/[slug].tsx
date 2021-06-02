@@ -2,21 +2,21 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 import { useState, useCallback } from 'react'
-import { IoMdDownload } from 'react-icons/io'
+//import { IoMdDownload } from 'react-icons/io'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
 import {
   Container,
   Video,
   UpperTitle,
-  Download,
+  //Download,
   FlexboxLeft,
   FlexboxRight,
   NextVideos,
   NextVideoTitle
 } from '../../styles/cursos/slug/styles'
 import api from '../../services/api'
-import { exception } from 'console'
+//import { exception } from 'console'
 
 interface PlaylistItem {
   kind: string
@@ -117,9 +117,7 @@ export default function VideoPlayer({
   return (
     <>
       <Head>
-        <title>
-          {courseInfo.courseName} | {process.env.BLOG_NAME}
-        </title>
+        <title>Cursos | {courseInfo.courseName}</title>
         <meta
           name="og:title"
           property="og:title"
@@ -174,7 +172,10 @@ export default function VideoPlayer({
                     key={String(position)}
                     onClick={(): void => changeVideo(position)}
                   >
-                    <img src={thumbnails.medium} alt={video.snippet.title} />
+                    <img
+                      src={String(thumbnails.medium)}
+                      alt={video.snippet.title}
+                    />
                     <h3>{shortTitle}</h3>
                     <h4>{mediumTitle}</h4>
                   </Video>
