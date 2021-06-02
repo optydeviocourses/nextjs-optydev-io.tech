@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.main`
   width: 80vw;
@@ -65,7 +65,7 @@ export const Container = styled.main`
       font-size: 16px;
     }
   }
-`;
+`
 
 export const AspectRatio = styled.div`
   /* iframe {
@@ -141,4 +141,4 @@ export const AspectRatio = styled.div`
       height: 180px;
     }
   }
-`;
+`
