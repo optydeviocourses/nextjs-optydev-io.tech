@@ -8,11 +8,11 @@ import {
 } from '../../styles/portfolio/padrao/styles'
 import Button from '../../components/Button'
 
-export default function gcp(): JSX.Element {
+export default function nocode(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Portfolio | GCP</title>
+        <title>Portfolio | NOCODE</title>
         <meta
           name="og:title"
           property="og:title"
@@ -21,8 +21,8 @@ export default function gcp(): JSX.Element {
         <meta name="description" content={process.env.APP_TEMA} />
       </Head>
       <Container>
-        <h1>GCP</h1>
-        <img src="/assets/gcp.png" alt={process.env.APP_NAME} />
+        <h1>NOCODE</h1>
+        <img src="/assets/optydev.io.png" alt={process.env.APP_NAME} />
         <strong>
           - Projeto:
           <span></span>
@@ -49,7 +49,7 @@ export default function gcp(): JSX.Element {
         </strong>
         <strong>
           - Descrição técnica:
-          <span></span>
+          <span> </span>
         </strong>
         <ButtonContainer>
           <Button link={process.env.GITHUB_CONTA}>

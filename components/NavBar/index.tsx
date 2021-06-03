@@ -8,10 +8,6 @@ import { useTheme } from '../../context/theme'
 import { Background, Container, MenuIcon, MenuBar } from './styles'
 
 const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
-const blogContexts =
-  process.env.BLOG_CONTEXT ||
-  'Blog sobre conteúdos de DevOps, FullStack e FullCicle'
-const appUrl = process.env.APP_URL || 'https://optydev-io.tech'
 
 const NavBar: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false)
@@ -86,7 +82,7 @@ const NavBar: React.FC = () => {
           </li>
           <li>
             <Link href="/portfolio">
-              <a>portfolio</a>
+              <a>portfólio</a>
             </Link>
           </li>
           <li>

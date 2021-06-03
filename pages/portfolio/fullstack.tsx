@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+
 import { FaGithub, FaYoutube } from 'react-icons/fa'
 
 import {
@@ -8,11 +9,11 @@ import {
 } from '../../styles/portfolio/padrao/styles'
 import Button from '../../components/Button'
 
-export default function gcp(): JSX.Element {
+export default function fullstack(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Portfolio | GCP</title>
+        <title>Portfolio | FULLSTACK</title>
         <meta
           name="og:title"
           property="og:title"
@@ -21,8 +22,8 @@ export default function gcp(): JSX.Element {
         <meta name="description" content={process.env.APP_TEMA} />
       </Head>
       <Container>
-        <h1>GCP</h1>
-        <img src="/assets/gcp.png" alt={process.env.APP_NAME} />
+        <h1>FULLSTACK</h1>
+        <img src="/assets/optydev.io.png" alt={process.env.APP_NAME} />
         <strong>
           - Projeto:
           <span></span>
@@ -49,12 +50,12 @@ export default function gcp(): JSX.Element {
         </strong>
         <strong>
           - Descrição técnica:
-          <span></span>
+          <span> </span>
         </strong>
         <ButtonContainer>
           <Button link={process.env.GITHUB_CONTA}>
             <FaGithub size={25} color="#fff" />
-            GITHUB
+            Conta do GITHUB
           </Button>
           <Button link={process.env.YOUTUBE_CONTA}>
             <FaYoutube size={25} color="#fff" />

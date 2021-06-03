@@ -13,10 +13,6 @@ import {
 } from '../styles/contato/styles'
 
 const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
-const blogContexts =
-  process.env.BLOG_CONTEXT ||
-  'Blog sobre conteúdos de DevOps, FullStack e FullCicle'
-const appUrl = process.env.APP_URL || 'https://optydev-io.tech'
 
 export default function Contato(): JSX.Element {
   const [loading, setLoading] = useState(0)

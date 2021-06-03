@@ -8,11 +8,11 @@ import {
 } from '../../styles/portfolio/padrao/styles'
 import Button from '../../components/Button'
 
-export default function gcp(): JSX.Element {
+export default function highcode(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Portfolio | GCP</title>
+        <title>Portfolio | HIGHCODE</title>
         <meta
           name="og:title"
           property="og:title"
@@ -21,8 +21,8 @@ export default function gcp(): JSX.Element {
         <meta name="description" content={process.env.APP_TEMA} />
       </Head>
       <Container>
-        <h1>GCP</h1>
-        <img src="/assets/gcp.png" alt={process.env.APP_NAME} />
+        <h1>HIGHCODE</h1>
+        <img src="/assets/optydev.io.png" alt={process.env.APP_NAME} />
         <strong>
           - Projeto:
           <span></span>
@@ -49,23 +49,23 @@ export default function gcp(): JSX.Element {
         </strong>
         <strong>
           - Descrição técnica:
-          <span></span>
+          <span> </span>
         </strong>
         <ButtonContainer>
           <Button link={process.env.GITHUB_CONTA}>
             <FaGithub size={25} color="#fff" />
-            GITHUB
+            Conta do GITHUB
           </Button>
           <Button link={process.env.YOUTUBE_CONTA}>
             <FaYoutube size={25} color="#fff" />
             Tutorais
           </Button>
+          <Link href="/portfolio/">
+            <a>
+              <Button>Retornar</Button>
+            </a>
+          </Link>
         </ButtonContainer>
-        <Link href="/portfolio/">
-          <a>
-            <Button>Retornar</Button>
-          </a>
-        </Link>
       </Container>
     </>
   )
