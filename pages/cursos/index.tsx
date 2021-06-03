@@ -88,7 +88,7 @@ export default function Cursos({
             <Link href="/cursos/">
               <a>
                 <Thumbnail id="thumbnail">
-                  <p>Arquiteturas</p>
+                  <p>Em breve</p>
                 </Thumbnail>
               </a>
             </Link>
