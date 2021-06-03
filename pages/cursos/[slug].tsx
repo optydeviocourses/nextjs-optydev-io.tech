@@ -1,6 +1,10 @@
 /* eslint-disable no-param-reassign */
-import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
+
+import Button from '../../components/Button'
+
+import { GetStaticPaths, GetStaticProps } from 'next'
 import { useState, useCallback } from 'react'
 //import { IoMdDownload } from 'react-icons/io'
 import PerfectScrollbar from 'react-perfect-scrollbar'
@@ -154,6 +158,7 @@ export default function VideoPlayer({
           />
           <span>{selectedVideo.snippet.description}</span>
         </FlexboxLeft>
+
         <FlexboxRight>
           <NextVideoTitle>
             <strong>Próximas aulas</strong>
@@ -185,6 +190,11 @@ export default function VideoPlayer({
           </NextVideos>
         </FlexboxRight>
       </Container>
+      <Link href="/cursos/">
+        <a>
+          <Button>Retornar</Button>
+        </a>
+      </Link>
     </>
   )
 }
