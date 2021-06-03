@@ -282,24 +282,24 @@ export const getStaticProps: GetStaticProps = async ({ params }: PathProps) => {
     (video: Video) => video.snippet.title !== 'Private video'
   )
 
-  try {
-    if (filteredData[0].snippet.title.includes('-')) {
-      filteredData.forEach((element: Video) => {
-        const { title } = element.snippet
-        const splitTitle = title.split('- ')[1]
-        const splitSplitTitle = splitTitle.split(':')[0]
+  // try {
+  //   if (filteredData[0].snippet.title.includes('-')) {
+  //     filteredData.forEach((element: Video) => {
+  //       const { title } = element.snippet
+  //       const splitTitle = title.split('- ')[1]
+  //       const splitSplitTitle = splitTitle.split(':')[0]
 
-        element.snippet.mediumTitle = splitTitle
-        element.snippet.shortTitle = splitSplitTitle
-      })
-    } else {
-      filteredData.forEach((element: Video) => {
-        element.snippet.mediumTitle = element.snippet.shortTitle =
-          element.snippet.title
-      })
-    }
-  } finally {
-  }
+  //       element.snippet.mediumTitle = splitTitle
+  //       element.snippet.shortTitle = splitSplitTitle
+  //     })
+  //   } else {
+  //     filteredData.forEach((element: Video) => {
+  //       element.snippet.mediumTitle = element.snippet.shortTitle =
+  //         element.snippet.title
+  //     })
+  //   }
+  // } finally {
+  // }ß
 
   return {
     props: {
