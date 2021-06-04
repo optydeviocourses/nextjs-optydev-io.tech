@@ -45,6 +45,7 @@ export default function BlogPost({ post }: PropTypes): JSX.Element {
       </Head>
       <Container>
         {RichText.render(post.data.title)}
+
         <span>{post.data.formattedDate}</span>
 
         {post?.data?.video_id && (
@@ -59,6 +60,7 @@ export default function BlogPost({ post }: PropTypes): JSX.Element {
           </AspectRatio>
         )}
 
+        {post.data.description}
         {post.data.body.map((section) => RichText.render(section.primary.text))}
 
         <Link href="/blog">
