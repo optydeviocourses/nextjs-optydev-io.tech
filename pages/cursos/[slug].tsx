@@ -132,6 +132,7 @@ export default function VideoPlayer({
       <Container>
         <FlexboxLeft>
           <h1>{courseInfo.courseName}</h1>
+          {/* {selectedVideo.snippet.resourceId.videoId} */}
           <UpperTitle>
             <h2>
               {selectedVideo.snippet.mediumTitle || selectedVideo.snippet.title}

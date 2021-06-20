@@ -10,7 +10,7 @@ import Button from '../../components/Button'
 import { Container, AspectRatio } from '../../styles/blog/uid/styles'
 import { client } from '../../utils/prismic-configuration'
 
-const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
+const blogName = process.env.BLOG_NAME || 'optydev-io.com'
 
 interface PathProps {
   params: {
@@ -41,22 +41,25 @@ export default function BlogPost({ post }: PropTypes): JSX.Element {
       </Head>
       <Container>
         {RichText.render(post.data.title)}
+        <span>{RichText.render(post.data.description)}</span>
         <span>{post.data.formattedDate}</span>
+
         {post?.data?.video_id && (
           <AspectRatio>
             <iframe
               title="videoPlayer"
-              src={`https://www.youtube.com/embed/${post.data.video_id}?rel=0`}
+              src={`https://www.youtube.com/embed/${RichText.asText(
+                post.data.video_id
+              )}?rel=0`}
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
           </AspectRatio>
         )}
-
-        {/* {post.data.description} */}
+        <span></span>
         {post.data.body.map((section) => RichText.render(section.primary.text))}
-
+        <span></span>
         <Link href="/blog">
           <a>
             <Button>
@@ -113,6 +116,8 @@ export const getStaticProps: GetStaticProps = async ({ params }: PathProps) => {
   post.data.formattedDate = `${dateArray[2]} de ${
     mapNumberToMonth[dateArray[1] - 1]
   } de ${dateArray[0]}`
+
+  // post.data.video_id = RichText.asText(post.data.video_id) || 'VYn46y0wr_s'
 
   return {
     props: {

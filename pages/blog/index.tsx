@@ -7,12 +7,12 @@ import { RichText } from 'prismic-reactjs'
 import { client } from '../../utils/prismic-configuration'
 import { Container, Post, Text } from '../../styles/blog/styles'
 import ApiSearchResponse from 'prismic-javascript/types/ApiSearchResponse'
-import { Document } from 'prismic-javascript/types/documents'
+// import { Document } from 'prismic-javascript/types/documents'
 const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
 
 interface PropTypes {
   posts: ApiSearchResponse
-  home: Document
+  // home: Document
 }
 
 export default function Blog({ posts }: PropTypes): JSX.Element {
@@ -78,6 +78,8 @@ export const getStaticProps: GetStaticProps = async () => {
     post.data.formattedDate = `${dateArray[2]} de ${
       mapNumberToMonth[dateArray[1] - 1]
     } de ${dateArray[0]}`
+
+    // post.data.video_id = 'VYn46y0wr_s'
   })
 
   return {
