@@ -7,24 +7,12 @@ import { RichText } from 'prismic-reactjs'
 import { client } from '../../utils/prismic-configuration'
 import { Container, Post, Text } from '../../styles/blog/styles'
 import ApiSearchResponse from 'prismic-javascript/types/ApiSearchResponse'
-// import { Document } from 'prismic-javascript/types/documents';
-
-const appTema = process.env.APP_TEMA || 'DevOps, FullStack e FullCicle.'
-const appContexts =
-  process.env.APP_CONTEXTS || 'Consultoria, Treinamento e Soluções em TI.'
-const appMissao =
-  process.env.APP_MISSAO ||
-  'Tecnologias: DevOps, FullStack, nocode, lowcode e highcode.'
-
+import { Document } from 'prismic-javascript/types/documents'
 const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
-
-const githubConta = process.env.GITHUB_CONTA
-const instagraConta = process.env.INSTAGRAM_CONTA
-const youtubeConta = process.env.YOUTUBE_CONTA
 
 interface PropTypes {
   posts: ApiSearchResponse
-  // home: Document;
+  home: Document
 }
 
 export default function Blog({ posts }: PropTypes): JSX.Element {
@@ -76,9 +64,9 @@ export const getStaticProps: GetStaticProps = async () => {
     'Dezembro'
   ]
 
-  // const home = await client.getSingle('blog_post', {
-  //   orderings: '[my.post.date desc]',
-  // });
+  const home = await client.getSingle('blog_post', {
+    orderings: '[my.post.date desc]'
+  })
 
   const posts = await client.query(
     Prismic.Predicates.at('document.type', 'blog_post'),
@@ -94,8 +82,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      posts
-      // home,
+      posts,
+      home
     }
   }
 }

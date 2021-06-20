@@ -2,18 +2,10 @@ import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import Head from 'next/head'
 
-const appTema = process.env.APP_TEMA || 'DevOps, FullStack e FullCicle.'
 const appContexts =
   process.env.APP_CONTEXTS || 'Consultoria, Treinamento e Soluções em TI.'
-const appMissao =
-  process.env.APP_MISSAO ||
-  'Tecnologias: DevOps, FullStack, nocode, lowcode e highcode.'
 
 const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
-
-const githubConta = process.env.GITHUB_CONTA
-const instagraConta = process.env.INSTAGRAM_CONTA
-const youtubeConta = process.env.YOUTUBE_CONTA
 
 import api from '../../services/api'
 import {
@@ -36,6 +28,11 @@ interface PlaylistItem {
     description: ''
     thumbnails: {
       default: {
+        url: string
+        width: number
+        height: number
+      }
+      maxres: {
         url: string
         width: number
         height: number
@@ -118,7 +115,7 @@ export default function Cursos({
                 <a>
                   <Thumbnail>
                     <img
-                      src={playlist.snippet.thumbnails.default.url}
+                      src={playlist.snippet.thumbnails.maxres.url}
                       alt={playlist.snippet.title}
                     />
                   </Thumbnail>

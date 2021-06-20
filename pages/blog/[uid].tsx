@@ -11,10 +11,6 @@ import { Container, AspectRatio } from '../../styles/blog/uid/styles'
 import { client } from '../../utils/prismic-configuration'
 
 const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
-const blogContexts =
-  process.env.BLOG_CONTEXT ||
-  'Blog sobre conteúdos de DevOps, FullStack e FullCicle'
-const appUrl = process.env.APP_URL || 'https://optydev-io.tech'
 
 interface PathProps {
   params: {
@@ -45,9 +41,7 @@ export default function BlogPost({ post }: PropTypes): JSX.Element {
       </Head>
       <Container>
         {RichText.render(post.data.title)}
-
         <span>{post.data.formattedDate}</span>
-
         {post?.data?.video_id && (
           <AspectRatio>
             <iframe
@@ -60,7 +54,7 @@ export default function BlogPost({ post }: PropTypes): JSX.Element {
           </AspectRatio>
         )}
 
-        {post.data.description}
+        {/* {post.data.description} */}
         {post.data.body.map((section) => RichText.render(section.primary.text))}
 
         <Link href="/blog">
