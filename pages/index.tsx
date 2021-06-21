@@ -16,7 +16,7 @@ const appMissao =
   process.env.APP_MISSAO ||
   'Tecnologias: DevOps, FullStack, nocode, lowcode e highcode.'
 
-const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
+const blogName = process.env.BLOG_NAME || 'optydev-io.com'
 
 const githubConta = process.env.GITHUB_CONTA
 const instagraConta = process.env.INSTAGRAM_CONTA
