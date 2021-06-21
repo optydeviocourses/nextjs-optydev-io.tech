@@ -2,9 +2,10 @@
 
 Projeto de nossa Página com os cursos, blogs e etc.
 
-## nextJS
+## NextJS 11
 
-Criado em NODEJS, com o NextJS como base da plataforma.
+Plataforma todo criada em Nextjs, e com a mesma locada na Vercel.
+Esse conjunto nos permite ter uma plataforma padrão usando os produtos de uma mesma empresa.
 
 # Equipe
 optydev-io.com
