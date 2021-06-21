@@ -7,7 +7,7 @@ import { BsFillLightningFill } from 'react-icons/bs'
 
 import { Container, Button, ButtonsContainer } from '../styles/links/styles'
 
-const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
+const blogName = process.env.BLOG_NAME || 'optydev-io.com'
 
 const blogContexts =
   process.env.BLOG_CONTEXT ||
