@@ -12,7 +12,7 @@ import {
   Form
 } from '../styles/contato/styles'
 
-const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
+const blogName = process.env.BLOG_NAME || 'optydev-io.com'
 
 export default function Contato(): JSX.Element {
   const [loading, setLoading] = useState(0)
