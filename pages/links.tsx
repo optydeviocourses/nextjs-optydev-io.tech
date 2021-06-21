@@ -9,10 +9,6 @@ import { Container, Button, ButtonsContainer } from '../styles/links/styles'
 
 const blogName = process.env.BLOG_NAME || 'optydev-io.com'
 
-const blogContexts =
-  process.env.BLOG_CONTEXT ||
-  'Blog sobre conteúdos de DevOps, FullStack e FullCicle'
-
 const appUrl = process.env.APP_URL || 'https://optydev-io.tech'
 
 const youtubeKeyApi =

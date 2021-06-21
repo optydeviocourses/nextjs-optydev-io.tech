@@ -15,12 +15,6 @@ const appMissao =
   process.env.APP_MISSAO ||
   'Tecnologias: DevOps, FullStack, nocode, lowcode e highcode.'
 
-const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
-
-const githubConta = process.env.GITHUB_CONTA
-const instagraConta = process.env.INSTAGRAM_CONTA
-const youtubeConta = process.env.YOUTUBE_CONTA
-
 interface ReturnType {
   styles: JSX.Element
   html: string

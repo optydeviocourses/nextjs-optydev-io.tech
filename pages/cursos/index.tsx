@@ -96,6 +96,13 @@ export default function Cursos({
             <Thumbnail id="thumbnail">
               <p>Em breve</p>
             </Thumbnail>
+            <span>Curso de Linux</span>
+          </Course>
+
+          <Course>
+            <Thumbnail id="thumbnail">
+              <p>Em breve</p>
+            </Thumbnail>
             <span>Curso de Nextjs</span>
           </Course>
 
@@ -115,7 +122,7 @@ export default function Cursos({
                 <a>
                   <Thumbnail>
                     <img
-                      src={playlist.snippet.thumbnails.maxres.url}
+                      src={playlist.snippet.thumbnails.default.url}
                       alt={playlist.snippet.title}
                     />
                   </Thumbnail>
@@ -126,6 +133,24 @@ export default function Cursos({
           ))}
         </CourseList>
 
+        {/* <CourseList>
+          {OtherPlaylists.map((playlist: PlaylistItem) => (
+            <Course key={playlist.id}>
+              <Link href="/cursos/[slug]" as={`/cursos/${playlist.slug}`}>
+                <a>
+                  <Thumbnail>
+                    <img
+                      src={playlist.snippet.thumbnails.default.url}
+                      alt={playlist.snippet.title}
+                    />
+                  </Thumbnail>
+                </a>
+              </Link>
+              <span>{playlist.snippet.title}</span>
+            </Course>
+          ))}
+        </CourseList>
+         */}
         <h1>Outros conteúdos</h1>
         <CourseList>
           {OtherPlaylists.map((playlist: PlaylistItem) => (
