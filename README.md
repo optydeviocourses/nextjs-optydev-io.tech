@@ -1,9 +1,10 @@
 # optydev-io.tech
 
-This is the codebase for the new version of my personal website, made in next.js.
+Projeto de nossa Página com os cursos, blogs e etc.
 
-## Why Next.js?
-Because the SEO of a React website is **complete shit**
+## nextJS
 
-# Porque Next.js ?
-Porque é o SEO para React website
+Criado em NODEJS, com o NextJS como base da plataforma.
+
+# Equipe
+optydev-io.com
