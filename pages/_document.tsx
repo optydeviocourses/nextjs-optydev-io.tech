@@ -8,12 +8,6 @@ import Document, {
 import { ServerStyleSheet } from 'styled-components'
 
 const appUrl = process.env.APP_URL || 'https://optydev-io.tech'
-const appTema = process.env.APP_TEMA || 'DevOps, FullStack e FullCicle.'
-const appContexts =
-  process.env.APP_CONTEXTS || 'Consultoria, Treinamento e Soluções em TI.'
-const appMissao =
-  process.env.APP_MISSAO ||
-  'Tecnologias: DevOps, FullStack, nocode, lowcode e highcode.'
 
 interface ReturnType {
   styles: JSX.Element
