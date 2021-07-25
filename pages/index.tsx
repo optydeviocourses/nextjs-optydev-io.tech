@@ -9,14 +9,11 @@ import {
   RightText
 } from '../styles/home/styles'
 
-const appTema = process.env.APP_TEMA || 'DevOps, FullStack e FullCicle.'
-const appContexts =
-  process.env.APP_CONTEXTS || 'Consultoria, Treinamento e Soluções em TI.'
-const appMissao =
-  process.env.APP_MISSAO ||
-  'Tecnologias: DevOps, FullStack, nocode, lowcode e highcode.'
+const appTema = process.env.APP_TEMA
+const appContexts = process.env.APP_CONTEXTS
+const appMissao = process.env.APP_MISSAO
 
-const blogName = process.env.BLOG_NAME || 'optydev-io.xyz'
+const blogName = process.env.BLOG_NAME
 
 const githubConta = process.env.GITHUB_CONTA
 const instagraConta = process.env.INSTAGRAM_CONTA

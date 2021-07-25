@@ -7,16 +7,7 @@ import { BsFillLightningFill } from 'react-icons/bs'
 
 import { Container, Button, ButtonsContainer } from '../styles/links/styles'
 
-const blogName = process.env.BLOG_NAME || 'optydev-io.xyz'
-
-const appUrl = process.env.APP_URL || 'https://optydev-io.tech'
-
-const youtubeKeyApi =
-  process.env.YOUTUBE_KEY_API || 'AIzaSyADjNYcvAla-UQxvyqBUXlR1mzEVkHiTrk'
-
-const channelId = process.env.CHANNEL_ID || 'UCaA6KIbCHhg4_Te1ef-ilZA'
-
-const githubConta = process.env.GITHUB_CONTA || 'optydev.io.courses'
+const blogName = process.env.BLOG_NAME
 
 const Home: React.FC = () => {
   return (

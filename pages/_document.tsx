@@ -7,7 +7,7 @@ import Document, {
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
-const appUrl = process.env.APP_URL || 'https://optydev-io.tech'
+const appUrl = process.env.APP_URL
 
 interface ReturnType {
   styles: JSX.Element

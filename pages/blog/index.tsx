@@ -8,7 +8,7 @@ import { client } from '../../utils/prismic-configuration'
 import { Container, Post, Text } from '../../styles/blog/styles'
 import ApiSearchResponse from 'prismic-javascript/types/ApiSearchResponse'
 // import { Document } from 'prismic-javascript/types/documents'
-const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
+const blogName = process.env.BLOG_NAME
 
 interface PropTypes {
   posts: ApiSearchResponse

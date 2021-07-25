@@ -2,10 +2,9 @@ import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import Head from 'next/head'
 
-const appContexts =
-  process.env.APP_CONTEXTS || 'Consultoria, Treinamento e Soluções em TI.'
+const appContexts = process.env.APP_CONTEXTS
 
-const blogName = process.env.BLOG_NAME || 'optydev-io.tech'
+const blogName = process.env.BLOG_NAME
 
 import api from '../../services/api'
 import {
