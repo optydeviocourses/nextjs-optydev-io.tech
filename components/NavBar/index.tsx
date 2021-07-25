@@ -7,7 +7,7 @@ import { FaMoon } from 'react-icons/fa'
 import { useTheme } from '../../context/theme'
 import { Background, Container, MenuIcon, MenuBar } from './styles'
 
-const blogName = process.env.BLOG_NAME || 'optydev-io.com'
+const blogName = process.env.BLOG_NAME || 'optydev-io.xyz'
 
 const NavBar: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false)
