@@ -7,7 +7,7 @@ import { BsFillLightningFill } from 'react-icons/bs'
 
 import { Container, Button, ButtonsContainer } from '../styles/links/styles'
 
-const blogName = process.env.BLOG_NAME
+const blogName = process.env.NEXT_PUBLIC_BLOG_NAME
 
 const Home: React.FC = () => {
   return (
