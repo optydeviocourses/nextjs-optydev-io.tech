@@ -9,21 +9,22 @@ import {
 } from '../../styles/portfolio/padrao/styles'
 import Button from '../../components/Button'
 
+const youtubeConta = process.env.NEXT_PUBLIC_YOUTUBE_CONTA
+const githubConta = process.env.NEXT_PUBLIC_GITHUB_CONTA
+const appTema = process.env.NEXT_PUBLIC_APP_TEMA
+const appName = process.env.NEXT_PUBLIC_APP_NAME
+
 export default function devops(): JSX.Element {
   return (
     <>
       <Head>
         <title>Portfolio | DEVOPS</title>
-        <meta
-          name="og:title"
-          property="og:title"
-          content={process.env.APP_NAME}
-        />
-        <meta name="description" content={process.env.APP_TEMA} />
+        <meta name="og:title" property="og:title" content={appName} />
+        <meta name="description" content={appTema} />
       </Head>
       <Container>
         <h1>DEVOPS</h1>
-        <img src="/assets/devops.png" alt={process.env.APP_NAME} />
+        <img src="/assets/devops.png" alt={appName} />
         <strong>
           - Projeto:
           <span></span>
@@ -53,11 +54,11 @@ export default function devops(): JSX.Element {
           <span> </span>
         </strong>
         <ButtonContainer>
-          <Button link={process.env.GITHUB_CONTA}>
+          <Button link={githubConta}>
             <FaGithub size={25} color="#fff" />
             Conta do GITHUB
           </Button>
-          <Button link={process.env.YOUTUBE_CONTA}>
+          <Button link={youtubeConta}>
             <FaYoutube size={25} color="#fff" />
             Tutorais
           </Button>

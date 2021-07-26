@@ -10,7 +10,7 @@ import Button from '../../components/Button'
 import { Container, AspectRatio } from '../../styles/blog/uid/styles'
 import { client } from '../../utils/prismic-configuration'
 
-const blogName = process.env.BLOG_NAME || 'optydev-io.com'
+const blogName = process.env.NEXT_PUBLIC_BLOG_NAME
 
 interface PathProps {
   params: {

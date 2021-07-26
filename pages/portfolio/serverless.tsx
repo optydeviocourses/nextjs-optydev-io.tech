@@ -8,21 +8,23 @@ import {
 } from '../../styles/portfolio/padrao/styles'
 import Button from '../../components/Button'
 
+const appName = process.env.NEXT_PUBLIC_APP_NAME
+const appTema = process.env.NEXT_PUBLIC_APP_TEMA
+
+const githubConta = process.env.NEXT_PUBLIC_GITHUB_CONTA
+const youtubeConta = process.env.NEXT_PUBLIC_YOUTUBE_CONTA
+
 export default function serverless(): JSX.Element {
   return (
     <>
       <Head>
         <title>Portfolio | SERVERLESS</title>
-        <meta
-          name="og:title"
-          property="og:title"
-          content={process.env.APP_NAME}
-        />
-        <meta name="description" content={process.env.APP_TEMA} />
+        <meta name="og:title" property="og:title" content={appName} />
+        <meta name="description" content={appTema} />
       </Head>
       <Container>
         <h1>SERVERLESS</h1>
-        <img src="/assets/serverless.png" alt={process.env.APP_NAME} />
+        <img src="/assets/serverless.png" alt={appName} />
         <strong>
           - Projeto:
           <span></span>
@@ -52,11 +54,11 @@ export default function serverless(): JSX.Element {
           <span> </span>
         </strong>
         <ButtonContainer>
-          <Button link={process.env.GITHUB_CONTA}>
+          <Button link={githubConta}>
             <FaGithub size={25} color="#fff" />
             GITHUB
           </Button>
-          <Button link={process.env.YOUTUBE_CONTA}>
+          <Button link={youtubeConta}>
             <FaYoutube size={25} color="#fff" />
             Tutorais
           </Button>

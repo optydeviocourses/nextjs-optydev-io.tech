@@ -12,7 +12,8 @@ import {
   Form
 } from '../styles/contato/styles'
 
-const blogName = process.env.BLOG_NAME
+const blogName = process.env.NEXT_PUBLIC_BLOG_NAME
+const blogContexts = process.env.NEXT_PUBLIC_BLOG_CONTEXTS
 
 export default function Contato(): JSX.Element {
   const [loading, setLoading] = useState(0)
@@ -125,11 +126,11 @@ export default function Contato(): JSX.Element {
       <Head>
         <title>Contato | {blogName}</title>
         <meta name="og:title" property="og:title" content="Entre em contato" />
-        <meta name="description" content="{ blogCOntexts }" />
+        <meta name="description" content={blogContexts} />
       </Head>
       <Container>
         <Contact>
-          <img src="/assets/logo.png" alt="optydev-io.tech" />
+          <img src="/assets/logo.png" alt={blogName} />
           <SocialMedia>
             <CopyToClipBoard>
               <GrMail size={30} />

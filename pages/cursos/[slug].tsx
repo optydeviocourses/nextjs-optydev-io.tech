@@ -101,6 +101,9 @@ interface PropTypes {
   slug: string
 }
 
+const youtubeApiKey = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY
+const youtubeChannelId = process.env.NEXT_PUBLIC_CHANNEL_ID
+
 export default function VideoPlayer({
   data,
   courseInfo
@@ -204,8 +207,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const { data } = await api.get('/playlists', {
     params: {
       part: 'snippet',
-      key: process.env.YOUTUBE_API_KEY,
-      channelId: process.env.CHANNEL_ID,
+      key: youtubeApiKey,
+      channelId: youtubeChannelId,
       maxResults: 50
     }
   })
@@ -238,8 +241,8 @@ export const getStaticProps: GetStaticProps = async ({ params }: PathProps) => {
   const response = await api.get('/playlists', {
     params: {
       part: 'snippet',
-      key: process.env.YOUTUBE_API_KEY,
-      channelId: process.env.CHANNEL_ID,
+      key: youtubeApiKey,
+      channelId: youtubeChannelId,
       maxResults: 50
     }
   })
@@ -270,7 +273,7 @@ export const getStaticProps: GetStaticProps = async ({ params }: PathProps) => {
   const { data } = await api.get('/playlistItems', {
     params: {
       part: 'snippet',
-      key: process.env.YOUTUBE_API_KEY,
+      key: youtubeApiKey,
       maxResults: 50,
       playlistId: mapSlugToProperties[params.slug].playlistId
     }

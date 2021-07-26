@@ -8,7 +8,8 @@ import { client } from '../../utils/prismic-configuration'
 import { Container, Post, Text } from '../../styles/blog/styles'
 import ApiSearchResponse from 'prismic-javascript/types/ApiSearchResponse'
 // import { Document } from 'prismic-javascript/types/documents'
-const blogName = process.env.BLOG_NAME
+//const appContexts = process.env.NEXT_PUBLIC_APP_CONTEXTS
+const blogName = process.env.NEXT_PUBLIC_BLOG_NAME
 
 interface PropTypes {
   posts: ApiSearchResponse

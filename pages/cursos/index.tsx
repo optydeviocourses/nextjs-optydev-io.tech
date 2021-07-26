@@ -2,9 +2,11 @@ import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import Head from 'next/head'
 
-const appContexts = process.env.APP_CONTEXTS
+const appContexts = process.env.NEXT_PUBLIC_APP_CONTEXTS
+const blogName = process.env.NEXT_PUBLIC_BLOG_NAME
 
-const blogName = process.env.BLOG_NAME
+const youtubeApiKey = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY
+const youtubeChannelId = process.env.NEXT_PUBLIC_CHANNEL_ID
 
 import api from '../../services/api'
 import {
@@ -177,8 +179,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const { data } = await api.get('/playlists', {
     params: {
       part: 'snippet',
-      key: process.env.YOUTUBE_API_KEY,
-      channelId: process.env.CHANNEL_ID,
+      key: youtubeApiKey,
+      channelId: youtubeChannelId,
       maxResults: 50
     }
   })

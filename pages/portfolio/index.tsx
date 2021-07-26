@@ -6,13 +6,16 @@ import { Container, Project, Text } from '../../styles/portfolio/styles'
 import Button from '../../components/Button'
 import SpecialButton from '../../components/SpecialButton'
 
+const blogName = process.env.NEXT_PUBLIC_BLOG_NAME
+const appTema = process.env.NEXT_PUBLIC_APP_TEMA
+
 export default function Portfolio(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Porifilio | optydev-io.tech</title>
+        <title>Portfólio | {blogName}</title>
         <meta name="og:title" property="og:title" content="Portfolio" />
-        <meta name="description" content={process.env.APP_TEMA} />
+        <meta name="description" content={appTema} />
       </Head>
       <Container>
         <h1>

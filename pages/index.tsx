@@ -9,23 +9,22 @@ import {
   RightText
 } from '../styles/home/styles'
 
-const appTema = process.env.APP_TEMA
-const appContexts = process.env.APP_CONTEXTS
-const appMissao = process.env.APP_MISSAO
-
-const blogName = process.env.BLOG_NAME
-
-const githubConta = process.env.GITHUB_CONTA
-const instagraConta = process.env.INSTAGRAM_CONTA
-const youtubeConta = process.env.YOUTUBE_CONTA
+const blogName = process.env.NEXT_PUBLIC_BLOG_NAME
+const blogContexts = process.env.NEXT_PUBLIC_BLOG_CONTEXTS
+const youtubeConta = process.env.NEXT_PUBLIC_YOUTUBE_CONTA
+const instagramConta = process.env.NEXT_PUBLIC_INSTAGRAM_CONTA
+const githubConta = process.env.NEXT_PUBLIC_GITHUB_CONTA
+const appTema = process.env.NEXT_PUBLIC_APP_TEMA
+const appContexts = process.env.NEXT_PUBLIC_APP_CONTEXTS
+const appMissao = process.env.NEXT_PUBLIC_APP_MISSAO
 
 export default function Home(): JSX.Element {
   return (
     <>
       <Head>
         <title>Home | {blogName}</title>
-        <meta name="og:title" property="og:title" content="{blogName}" />
-        <meta name="description" content="{blogContexts}" />
+        <meta name="og:title" property="og:title" content={blogName} />
+        <meta name="description" content={blogContexts} />
       </Head>
       <Container>
         <Hello>
@@ -35,7 +34,11 @@ export default function Home(): JSX.Element {
               <a href={youtubeConta} target="_blank" rel="noopener noreferrer">
                 <FaYoutube size={36} />
               </a>
-              <a href={instagraConta} target="_blank" rel="noopener noreferrer">
+              <a
+                href={instagramConta}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram size={36} />
               </a>
               <a href={githubConta} target="_blank" rel="noopener noreferrer">
