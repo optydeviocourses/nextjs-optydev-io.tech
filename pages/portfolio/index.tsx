@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { FaFilePdf } from 'react-icons/fa'
+import { FaFilePdf, FaWhatsapp } from 'react-icons/fa'
 
 import { Container, Project, Text } from '../../styles/portfolio/styles'
 import Button from '../../components/Button'
@@ -18,6 +18,19 @@ export default function Portfolio(): JSX.Element {
         <meta name="description" content={appTema} />
       </Head>
       <Container>
+        <SpecialButton link="https://api.whatsapp.com/send?phone=+5582999698739&text=TUDO BEM ?? Gostaria de agendar um horário ?">
+          <FaWhatsapp color="#64f4ac" />
+          Nosso WhatsApp
+        </SpecialButton>
+
+        <h1>
+          <span> </span>
+          <img width="80" height="100" src="/assets/eu-prof.png" alt="Foto" />
+          <span> </span>
+          {''} Carlos Roberto dos Santos Silva {''}
+          {''} ( Consultor e Arquiteto de Sistemas ) {''}
+        </h1>
+
         <h1>
           <img
             width="100"
@@ -25,7 +38,7 @@ export default function Portfolio(): JSX.Element {
             src="/assets/optydev.io.png"
             alt="Logo AWS"
           />
-          {''} Consultoria{''}
+          {''} Consultoria, Arquitetura e DevOps {''}
         </h1>
 
         <strong>

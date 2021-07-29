@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { FaGithub, FaInstagram, FaYoutube } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa'
 
 import {
   Container,
@@ -13,6 +13,7 @@ const blogName = process.env.NEXT_PUBLIC_BLOG_NAME
 const blogContexts = process.env.NEXT_PUBLIC_BLOG_CONTEXTS
 const youtubeConta = process.env.NEXT_PUBLIC_YOUTUBE_CONTA
 const instagramConta = process.env.NEXT_PUBLIC_INSTAGRAM_CONTA
+const whatsAppConta = process.env.NEXT_PUBLIC_WHATSAPP_CONTA
 const githubConta = process.env.NEXT_PUBLIC_GITHUB_CONTA
 const appTema = process.env.NEXT_PUBLIC_APP_TEMA
 const appContexts = process.env.NEXT_PUBLIC_APP_CONTEXTS
@@ -31,6 +32,9 @@ export default function Home(): JSX.Element {
           <Left>
             <img src="/assets/logo.png" alt={blogName} />
             <SocialMedia>
+              <a href={whatsAppConta} target="_blank" rel="noopener noreferrer">
+                <FaWhatsapp size={36} />
+              </a>
               <a href={youtubeConta} target="_blank" rel="noopener noreferrer">
                 <FaYoutube size={36} />
               </a>
