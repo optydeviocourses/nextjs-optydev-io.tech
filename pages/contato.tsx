@@ -1,7 +1,13 @@
 import { useCallback, useState } from 'react'
 import Head from 'next/head'
 import { ToastContainer, toast } from 'react-toastify'
-import { FaGithub, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa'
+import {
+  FaGithub,
+  FaInstagram,
+  FaYoutube,
+  FaLinkedin,
+  FaWhatsapp
+} from 'react-icons/fa'
 import { GrMail } from 'react-icons/gr'
 
 import {
@@ -14,6 +20,12 @@ import {
 
 const blogName = process.env.NEXT_PUBLIC_BLOG_NAME
 const blogContexts = process.env.NEXT_PUBLIC_BLOG_CONTEXTS
+const youtubeConta = process.env.NEXT_PUBLIC_YOUTUBE_CONTA
+const instagramConta = process.env.NEXT_PUBLIC_INSTAGRAM_CONTA
+const whatsAppConta = process.env.NEXT_PUBLIC_WHATSAPP_CONTA
+const linkedinConta = process.env.NEXT_PUBLIC_LINKEDIN_CONTA
+
+const githubConta = process.env.NEXT_PUBLIC_GITHUB_CONTA
 
 export default function Contato(): JSX.Element {
   const [loading, setLoading] = useState(0)
@@ -136,37 +148,25 @@ export default function Contato(): JSX.Element {
               <GrMail size={30} />
               <p id="clipboard">{blogName}</p>
             </CopyToClipBoard>
-            <a
-              href="https://www.linkedin.com/in/daniel-gobbi-bergholz-752379149"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={whatsAppConta} target="_blank" rel="noopener noreferrer">
+              <FaWhatsapp size={30} />
+              <p> {blogName}</p>
+            </a>
+            <a href={linkedinConta} target="_blank" rel="noopener noreferrer">
               <FaLinkedin size={30} />
               <p> {blogName}</p>
             </a>
-            <a
-              href="https://www.github.com/optydev.io.courses"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={githubConta} target="_blank" rel="noopener noreferrer">
               <FaGithub size={30} />
               <p>{blogName}</p>
             </a>
-            <a
-              href="https://www.youtube.com/channel/UCaA6KIbCHhg4_Te1ef-ilZA"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={youtubeConta} target="_blank" rel="noopener noreferrer">
               <FaYoutube size={30} />
               <p>{blogName}</p>
             </a>
-            <a
-              href="https://www.instagram.com/optydev-io.tech/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={instagramConta} target="_blank" rel="noopener noreferrer">
               <FaInstagram size={30} />
-              <p>@{blogName}</p>
+              <p>{blogName}</p>
             </a>
           </SocialMedia>
         </Contact>
