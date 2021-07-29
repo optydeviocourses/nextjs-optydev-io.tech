@@ -26,6 +26,11 @@ export default function nocode(): JSX.Element {
         <h1>NOCODE</h1>
         <img src="/assets/optydev.io.png" alt={appName} />
         <strong>
+          - Participante da Comunidade Sem Codar (bubble.io)
+          <span></span>
+        </strong>
+        <img width="500" height="300" src="/assets/c-csc.png" alt={appName} />
+        <strong>
           - Projeto:
           <span></span>
         </strong>

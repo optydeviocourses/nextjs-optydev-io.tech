@@ -72,7 +72,7 @@ export default function Portfolio(): JSX.Element {
           - NoCode:
           <span> </span>
         </strong>
-        <Link href="/portfolio/fullstack">
+        <Link href="/portfolio/nocode">
           <a>
             <Button>ver mais</Button>
           </a>
