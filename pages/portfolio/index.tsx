@@ -25,7 +25,7 @@ export default function Portfolio(): JSX.Element {
 
         <h1>
           <span> </span>
-          <img width="80" height="100" src="/assets/eu-prof.png" alt="Foto" />
+          <img width="80" height="100" src="/assets/eu-mestre.png" alt="Foto" />
           <span> </span>
           {''} Carlos Roberto dos Santos Silva {''}
           {''} ( Consultor e Arquiteto de Sistemas ) {''}
