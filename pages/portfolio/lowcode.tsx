@@ -57,6 +57,7 @@ export default function aws(): JSX.Element {
             <FaGithub size={25} color="#fff" />
             GITHUB
           </Button>
+          <br></br>
           <Button link={youtubeConta}>
             <FaYoutube size={25} color="#fff" />
             Tutorais

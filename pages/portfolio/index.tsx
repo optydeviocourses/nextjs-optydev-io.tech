@@ -8,6 +8,8 @@ import SpecialButton from '../../components/SpecialButton'
 
 const blogName = process.env.NEXT_PUBLIC_BLOG_NAME
 const appTema = process.env.NEXT_PUBLIC_APP_TEMA
+const appCEO = process.env.NEXT_PUBLIC_APP_CEO
+const appCurriculum = process.env.NEXT_PUBLIC_APP_CURRICULUM
 
 export default function Portfolio(): JSX.Element {
   return (
@@ -18,17 +20,9 @@ export default function Portfolio(): JSX.Element {
         <meta name="description" content={appTema} />
       </Head>
       <Container>
-        <SpecialButton link="https://api.whatsapp.com/send?phone=+5582999698739&text=TUDO BEM ?? Gostaria de agendar um horário ?">
-          <FaWhatsapp color="#64f4ac" />
-          Nosso WhatsApp
-        </SpecialButton>
-
         <h1>
           <span> </span>
-          <img width="80" height="100" src="/assets/eu-mestre.png" alt="Foto" />
-          <span> </span>
-          {''} Carlos Roberto dos Santos Silva {''}
-          {''} ( Consultor e Arquiteto de Sistemas ) {''}
+          <img width="250" height="350" src="/assets/eu-mestre.png" alt="Foto" />
         </h1>
 
         <h1>
@@ -36,32 +30,36 @@ export default function Portfolio(): JSX.Element {
             width="100"
             height="25"
             src="/assets/optydev.io.png"
-            alt="Logo AWS"
+            alt="Logo optydev-io"
           />
-          {''} Consultoria, Arquitetura e DevOps {''}
+          {''} Consultoria, Engenharia, Arquitetura e DevOps {''}
         </h1>
 
+        <SpecialButton link="https://api.whatsapp.com/send?phone=+5582999698739&text=TUDO BEM ?? Gostaria de agendar um horário ?">
+          <FaWhatsapp color="#64f4ac" />
+          Nosso WhatsApp
+        </SpecialButton>
+        <br></br>
         <strong>
-          - DevOps:
-          <span> </span>
+          - DevOps
         </strong>
         <Link href="/portfolio/devops">
           <a>
             <Button>ver mais</Button>
           </a>
         </Link>
+
         <strong>
-          - FullStack:
-          <span> </span>
+          - FullStack
         </strong>
         <Link href="/portfolio/fullstack">
           <a>
             <Button>ver mais</Button>
           </a>
         </Link>
+
         <strong>
           - FullCycle:
-          <span> </span>
         </strong>
         <Link href="/portfolio/fullstack">
           <a>
@@ -69,8 +67,7 @@ export default function Portfolio(): JSX.Element {
           </a>
         </Link>
         <strong>
-          - NoCode:
-          <span> </span>
+          - NoCode
         </strong>
         <Link href="/portfolio/nocode">
           <a>
@@ -78,8 +75,7 @@ export default function Portfolio(): JSX.Element {
           </a>
         </Link>
         <strong>
-          - LowCode:
-          <span></span>
+          - LowCode
         </strong>
         <Link href="/portfolio/lowcode">
           <a>
@@ -87,13 +83,14 @@ export default function Portfolio(): JSX.Element {
           </a>
         </Link>
         <strong>
-          - HighCode:
+          - HighCode
           <span></span>
         </strong>
-
-        <SpecialButton link="/portfolio/highcode">
-          <FaFilePdf color="#64f4ac" />
-        </SpecialButton>
+        <Link href="/portfolio/highcode">
+          <a>
+            <Button>ver mais</Button>
+          </a>
+        </Link>
 
         <h1>
           <img
@@ -102,14 +99,14 @@ export default function Portfolio(): JSX.Element {
             src="/assets/optydev.io.png"
             alt="Logo AWS"
           />
-          {''} Tecnologias{''}
+          {''} Tecnologias {''}
         </h1>
 
         <Project>
           <img src="/assets/aws.png" alt="Logo AWS" />
           <Text>
             <strong>
-              - AWS:
+              - AWS
               <span> </span>
             </strong>
             <br />
@@ -129,7 +126,7 @@ export default function Portfolio(): JSX.Element {
           <img src="/assets/gcp.png" alt="Logo GCP" />
           <Text>
             <strong>
-              - GCP:
+              - GCP
               <span> </span>
             </strong>
             <br />
@@ -150,7 +147,7 @@ export default function Portfolio(): JSX.Element {
           <img src="/assets/azure.png" alt="Logo Azure" />
           <Text>
             <strong>
-              - AZURE:
+              - AZURE
               <span></span>
             </strong>
             <br />
@@ -159,6 +156,26 @@ export default function Portfolio(): JSX.Element {
               <span> </span>
             </strong>
             <Link href="/portfolio/azure">
+              <a>
+                <Button>ver mais</Button>
+              </a>
+            </Link>
+          </Text>
+        </Project>
+
+        <Project>
+          <img src="/assets/nest.svg" alt="Nest" />
+          <Text>
+            <strong>
+              - NEST
+              <span> </span>
+            </strong>
+            <br />
+            <strong>
+              - Descrição:
+              <span></span>
+            </strong>
+            <Link href="/portfolio/nest">
               <a>
                 <Button>ver mais</Button>
               </a>
@@ -179,6 +196,26 @@ export default function Portfolio(): JSX.Element {
               <span></span>
             </strong>
             <Link href="/portfolio/nextjs">
+              <a>
+                <Button>ver mais</Button>
+              </a>
+            </Link>
+          </Text>
+        </Project>
+
+        <Project>
+          <img src="/assets/graphql.png" alt="Logo GraphQL" />
+          <Text>
+            <strong>
+              - GraphQL
+              <span></span>
+            </strong>
+            <br />
+            <strong>
+              - Descrição:
+              <span> </span>
+            </strong>
+            <Link href="/portfolio/graphql">
               <a>
                 <Button>ver mais</Button>
               </a>
@@ -226,6 +263,7 @@ export default function Portfolio(): JSX.Element {
             </Link>
           </Text>
         </Project>
+        
       </Container>
     </>
   )

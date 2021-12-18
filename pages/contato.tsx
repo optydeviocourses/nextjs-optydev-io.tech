@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { ToastContainer, toast } from 'react-toastify'
 import {
   FaGithub,
+  FaGitlab,
   FaInstagram,
   FaYoutube,
   FaLinkedin,
@@ -26,6 +27,8 @@ const whatsAppConta = process.env.NEXT_PUBLIC_WHATSAPP_CONTA
 const linkedinConta = process.env.NEXT_PUBLIC_LINKEDIN_CONTA
 
 const githubConta = process.env.NEXT_PUBLIC_GITHUB_CONTA
+const gitlabConta = process.env.NEXT_PUBLIC_GITLAB_CONTA
+
 
 export default function Contato(): JSX.Element {
   const [loading, setLoading] = useState(0)
@@ -114,7 +117,6 @@ export default function Contato(): JSX.Element {
         }
 
         document.getElementsByTagName('textarea')[0].value = ''
-
         setLoading(0)
       })
       .catch(() => {
@@ -152,20 +154,16 @@ export default function Contato(): JSX.Element {
               <FaWhatsapp size={30} />
               <p> {blogName}</p>
             </a>
-            <a href={linkedinConta} target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={30} />
-              <p> {blogName}</p>
-            </a>
             <a href={githubConta} target="_blank" rel="noopener noreferrer">
               <FaGithub size={30} />
               <p>{blogName}</p>
             </a>
-            <a href={youtubeConta} target="_blank" rel="noopener noreferrer">
-              <FaYoutube size={30} />
+            <a href={githubConta} target="_blank" rel="noopener noreferrer">
+              <FaGitlab size={30} />
               <p>{blogName}</p>
             </a>
-            <a href={instagramConta} target="_blank" rel="noopener noreferrer">
-              <FaInstagram size={30} />
+            <a href={youtubeConta} target="_blank" rel="noopener noreferrer">
+              <FaYoutube size={30} />
               <p>{blogName}</p>
             </a>
           </SocialMedia>

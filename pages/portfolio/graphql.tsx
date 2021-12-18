@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { FaGithub, FaYoutube } from 'react-icons/fa'
+import { FaGithub,FaGitlab, FaYoutube } from 'react-icons/fa'
 
 import {
   Container,
@@ -8,23 +8,24 @@ import {
 } from '../../styles/portfolio/padrao/styles'
 import Button from '../../components/Button'
 
-const appName = process.env.NEXT_PUBLIC_APP_NAME
-const appTema = process.env.NEXT_PUBLIC_APP_TEMA
-
-const githubConta = process.env.NEXT_PUBLIC_GITHUB_CONTA
 const youtubeConta = process.env.NEXT_PUBLIC_YOUTUBE_CONTA
+const githubConta = process.env.NEXT_PUBLIC_GITHUB_CONTA
+const gitlabConta = process.env.NEXT_PUBLIC_GITLAB_CONTA
 
-export default function serverless(): JSX.Element {
+const appTema = process.env.NEXT_PUBLIC_APP_TEMA
+const appName = process.env.NEXT_PUBLIC_APP_NAME
+
+export default function graphql(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Portfolio | SERVERLESS</title>
+        <title>Portfolio | GraphQL</title>
         <meta name="og:title" property="og:title" content={appName} />
         <meta name="description" content={appTema} />
       </Head>
       <Container>
-        <h1>SERVERLESS</h1>
-        <img src="/assets/serverless.png" alt={appName} />
+        <h1>GraphQL</h1>
+        <img src="/assets/graphql.png" alt={appName} />
         <strong>
           - Projeto:
           <span></span>
@@ -57,6 +58,11 @@ export default function serverless(): JSX.Element {
           <Button link={githubConta}>
             <FaGithub size={25} color="#fff" />
             GITHUB
+          </Button>
+          <br></br>
+          <Button link={gitlabConta}>
+            <FaGitlab size={25} color="#fff" />
+            GITLAB
           </Button>
           <br></br>
           <Button link={youtubeConta}>

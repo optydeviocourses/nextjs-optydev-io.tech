@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import {
   FaGithub,
+  FaGitlab,
   FaInstagram,
   FaLinkedin,
   FaWhatsapp,
@@ -22,9 +23,12 @@ const linkedinConta = process.env.NEXT_PUBLIC_LINKEDIN_CONTA
 const instagramConta = process.env.NEXT_PUBLIC_INSTAGRAM_CONTA
 const whatsAppConta = process.env.NEXT_PUBLIC_WHATSAPP_CONTA
 const githubConta = process.env.NEXT_PUBLIC_GITHUB_CONTA
+const gitlabConta = process.env.NEXT_PUBLIC_GITLAB_CONTA
 const appTema = process.env.NEXT_PUBLIC_APP_TEMA
 const appContexts = process.env.NEXT_PUBLIC_APP_CONTEXTS
 const appMissao = process.env.NEXT_PUBLIC_APP_MISSAO
+const appCEO = process.env.NEXT_PUBLIC_APP_CEO
+const appCurriculum = process.env.NEXT_PUBLIC_APP_CURRICULUM
 
 export default function Home(): JSX.Element {
   return (
@@ -45,18 +49,11 @@ export default function Home(): JSX.Element {
               <a href={youtubeConta} target="_blank" rel="noopener noreferrer">
                 <FaYoutube size={36} />
               </a>
-              <a
-                href={instagramConta}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram size={36} />
-              </a>
               <a href={githubConta} target="_blank" rel="noopener noreferrer">
                 <FaGithub size={36} />
               </a>
-              <a href={linkedinConta} target="_blank" rel="noopener noreferrer">
-                <FaLinkedin size={36} />
+              <a href={githubConta} target="_blank" rel="noopener noreferrer">
+                <FaGitlab size={36} />
               </a>
             </SocialMedia>
           </Left>
@@ -64,6 +61,8 @@ export default function Home(): JSX.Element {
             <h1>{appTema}</h1>
             <h2>{appContexts}</h2>
             <p id="green-text">{appMissao}</p>
+            <p id="green-text">{appCEO}</p>
+            <p id="green-text">{appCurriculum}</p>
           </RightText>
         </Hello>
       </Container>

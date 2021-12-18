@@ -58,6 +58,13 @@ export default function ts(): JSX.Element {
             <FaGithub size={25} color="#fff" />
             GITHUB
           </Button>
+
+          <Button link={githubConta}>
+            <FaGithub size={25} color="#fff" />
+            GITHUB
+          </Button>
+
+          <br></br>
           <Button link={youtubeConta}>
             <FaYoutube size={25} color="#fff" />
             Tutorais

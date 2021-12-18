@@ -79,7 +79,6 @@ export const Project = styled.section`
     }
   }
 `
-
 export const Text = styled.aside`
   @media (max-width: 700px) {
     margin: 10px 0 10px 0;

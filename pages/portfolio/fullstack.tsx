@@ -58,6 +58,7 @@ export default function fullstack(): JSX.Element {
             <FaGithub size={25} color="#fff" />
             Conta do GITHUB
           </Button>
+          <br></br>
           <Button link={youtubeConta}>
             <FaYoutube size={25} color="#fff" />
             Tutorais
