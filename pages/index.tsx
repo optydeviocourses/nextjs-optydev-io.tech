@@ -1,5 +1,16 @@
 import Head from 'next/head'
-import { FaGithub, FaGitlab, FaWhatsapp, FaYoutube } from 'react-icons/fa'
+import {
+  FaGithub,
+  FaGitlab,
+  FaWhatsapp,
+  FaYoutube,
+  FaApple,
+  FaWindows,
+  FaAccusoft,
+  FaAws,
+  FaCloud,
+  FaLinux
+} from 'react-icons/fa'
 import {
   Container,
   Hello,
@@ -17,7 +28,7 @@ const whatsAppConta = process.env.NEXT_PUBLIC_WHATSAPP_CONTA
 const githubConta = process.env.NEXT_PUBLIC_GITHUB_CONTA
 const gitlabConta = process.env.NEXT_PUBLIC_GITLAB_CONTA
 
-const appTema = process.env.NEXT_PUBLIC_APP_TEMA
+// const appTema = process.env.NEXT_PUBLIC_APP_TEMA
 const appContexts = process.env.NEXT_PUBLIC_APP_CONTEXTS
 const appMissao = process.env.NEXT_PUBLIC_APP_MISSAO
 
@@ -52,10 +63,19 @@ export default function Home(): JSX.Element {
             </SocialMedia>
           </Left>
           <RightText>
-            <h1>{appTema}</h1>
+            <h1>{appMissao}</h1>
             <h2>{appContexts}</h2>
-            <p id="green-text">{appMissao}</p>
+            <br></br>
+            <FaApple size={36} />
+            <FaLinux size={36} />
+            <FaWindows size={36} />
+            <FaAws size={36} />
+            <FaAccusoft size={36} />
+            <FaCloud size={36} />
+            <FaGithub size={36} />
+            <FaGitlab size={36} />
             <p id="green-text">{appCEO}</p>
+            <br></br>
             <p id="green-text">{appCurriculum}</p>
           </RightText>
         </Hello>
