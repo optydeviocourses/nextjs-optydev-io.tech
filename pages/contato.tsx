@@ -1,14 +1,8 @@
 import { useCallback, useState } from 'react'
 import Head from 'next/head'
 import { ToastContainer, toast } from 'react-toastify'
-import {
-  FaGithub,
-  FaGitlab,
-  FaYoutube,
-  FaWhatsapp
-} from 'react-icons/fa'
+import { FaGithub, FaGitlab, FaYoutube, FaWhatsapp } from 'react-icons/fa'
 import { GrMail } from 'react-icons/gr'
-
 import {
   Container,
   SocialMedia,
@@ -21,11 +15,8 @@ const blogName = process.env.NEXT_PUBLIC_BLOG_NAME
 const blogContexts = process.env.NEXT_PUBLIC_BLOG_CONTEXTS
 const youtubeConta = process.env.NEXT_PUBLIC_YOUTUBE_CONTA
 const whatsAppConta = process.env.NEXT_PUBLIC_WHATSAPP_CONTA
-const linkedinConta = process.env.NEXT_PUBLIC_LINKEDIN_CONTA
-
 const githubConta = process.env.NEXT_PUBLIC_GITHUB_CONTA
 const gitlabConta = process.env.NEXT_PUBLIC_GITLAB_CONTA
-
 
 export default function Contato(): JSX.Element {
   const [loading, setLoading] = useState(0)

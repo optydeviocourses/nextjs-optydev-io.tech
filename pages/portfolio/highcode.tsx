@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { FaGithub,FaGitlab, FaYoutube } from 'react-icons/fa'
+import { FaGithub, FaGitlab, FaYoutube } from 'react-icons/fa'
 
 import {
   Container,
@@ -71,19 +71,11 @@ export default function highcode(): JSX.Element {
             Tutorais
           </Button>
         </ButtonContainer>
-
         <Link href="/portfolio/">
           <a>
             <Button>Retornar</Button>
           </a>
         </Link>
-
-        <Link href="/portfolio/">
-          <a>
-            <Button>Retornar</Button>
-          </a>
-        </Link>
-
       </Container>
     </>
   )

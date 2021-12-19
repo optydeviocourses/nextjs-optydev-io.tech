@@ -1,11 +1,5 @@
 import Head from 'next/head'
-import {
-  FaGithub,
-  FaGitlab,
-  FaWhatsapp,
-  FaYoutube
-} from 'react-icons/fa'
-
+import { FaGithub, FaGitlab, FaWhatsapp, FaYoutube } from 'react-icons/fa'
 import {
   Container,
   Hello,
@@ -16,13 +10,17 @@ import {
 
 const blogName = process.env.NEXT_PUBLIC_BLOG_NAME
 const blogContexts = process.env.NEXT_PUBLIC_BLOG_CONTEXTS
+
 const youtubeConta = process.env.NEXT_PUBLIC_YOUTUBE_CONTA
 const whatsAppConta = process.env.NEXT_PUBLIC_WHATSAPP_CONTA
+
 const githubConta = process.env.NEXT_PUBLIC_GITHUB_CONTA
 const gitlabConta = process.env.NEXT_PUBLIC_GITLAB_CONTA
+
 const appTema = process.env.NEXT_PUBLIC_APP_TEMA
 const appContexts = process.env.NEXT_PUBLIC_APP_CONTEXTS
 const appMissao = process.env.NEXT_PUBLIC_APP_MISSAO
+
 const appCEO = process.env.NEXT_PUBLIC_APP_CEO
 const appCurriculum = process.env.NEXT_PUBLIC_APP_CURRICULUM
 

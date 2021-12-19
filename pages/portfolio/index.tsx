@@ -21,8 +21,12 @@ export default function Portfolio(): JSX.Element {
       </Head>
       <Container>
         <h1>
-          <span> </span>
-          <img width="250" height="350" src="/assets/eu-mestre.png" alt="Foto" />
+          <img
+            width="250"
+            height="350"
+            src="/assets/eu-mestre.png"
+            alt="Foto"
+          />
         </h1>
 
         <h1>
@@ -42,24 +46,25 @@ export default function Portfolio(): JSX.Element {
         <br></br>
         <strong>
           - DevOps
+          <span></span>
         </strong>
         <Link href="/portfolio/devops">
           <a>
             <Button>ver mais</Button>
           </a>
         </Link>
-
         <strong>
           - FullStack
+          <span></span>
         </strong>
         <Link href="/portfolio/fullstack">
           <a>
             <Button>ver mais</Button>
           </a>
         </Link>
-
         <strong>
-          - FullCycle:
+          - FullCycle
+          <span></span>
         </strong>
         <Link href="/portfolio/fullstack">
           <a>
@@ -68,6 +73,7 @@ export default function Portfolio(): JSX.Element {
         </Link>
         <strong>
           - NoCode
+          <span></span>
         </strong>
         <Link href="/portfolio/nocode">
           <a>
@@ -76,6 +82,7 @@ export default function Portfolio(): JSX.Element {
         </Link>
         <strong>
           - LowCode
+          <span></span>
         </strong>
         <Link href="/portfolio/lowcode">
           <a>
@@ -91,7 +98,6 @@ export default function Portfolio(): JSX.Element {
             <Button>ver mais</Button>
           </a>
         </Link>
-
         <h1>
           <img
             width="100"
@@ -263,7 +269,6 @@ export default function Portfolio(): JSX.Element {
             </Link>
           </Text>
         </Project>
-
       </Container>
     </>
   )
