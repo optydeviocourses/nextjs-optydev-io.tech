@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { FaGithub,FaGitlab, FaYoutube } from 'react-icons/fa'
+import { FaGithub, FaGitlab, FaYoutube } from 'react-icons/fa'
 
 import {
   Container,

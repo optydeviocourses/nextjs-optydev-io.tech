@@ -4,9 +4,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import {
   FaGithub,
   FaGitlab,
-  FaInstagram,
   FaYoutube,
-  FaLinkedin,
   FaWhatsapp
 } from 'react-icons/fa'
 import { GrMail } from 'react-icons/gr'
@@ -22,7 +20,6 @@ import {
 const blogName = process.env.NEXT_PUBLIC_BLOG_NAME
 const blogContexts = process.env.NEXT_PUBLIC_BLOG_CONTEXTS
 const youtubeConta = process.env.NEXT_PUBLIC_YOUTUBE_CONTA
-const instagramConta = process.env.NEXT_PUBLIC_INSTAGRAM_CONTA
 const whatsAppConta = process.env.NEXT_PUBLIC_WHATSAPP_CONTA
 const linkedinConta = process.env.NEXT_PUBLIC_LINKEDIN_CONTA
 
@@ -158,7 +155,7 @@ export default function Contato(): JSX.Element {
               <FaGithub size={30} />
               <p>{blogName}</p>
             </a>
-            <a href={githubConta} target="_blank" rel="noopener noreferrer">
+            <a href={gitlabConta} target="_blank" rel="noopener noreferrer">
               <FaGitlab size={30} />
               <p>{blogName}</p>
             </a>

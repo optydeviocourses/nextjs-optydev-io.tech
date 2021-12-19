@@ -2,8 +2,6 @@ import Head from 'next/head'
 import {
   FaGithub,
   FaGitlab,
-  FaInstagram,
-  FaLinkedin,
   FaWhatsapp,
   FaYoutube
 } from 'react-icons/fa'
@@ -19,8 +17,6 @@ import {
 const blogName = process.env.NEXT_PUBLIC_BLOG_NAME
 const blogContexts = process.env.NEXT_PUBLIC_BLOG_CONTEXTS
 const youtubeConta = process.env.NEXT_PUBLIC_YOUTUBE_CONTA
-const linkedinConta = process.env.NEXT_PUBLIC_LINKEDIN_CONTA
-const instagramConta = process.env.NEXT_PUBLIC_INSTAGRAM_CONTA
 const whatsAppConta = process.env.NEXT_PUBLIC_WHATSAPP_CONTA
 const githubConta = process.env.NEXT_PUBLIC_GITHUB_CONTA
 const gitlabConta = process.env.NEXT_PUBLIC_GITLAB_CONTA
@@ -52,7 +48,7 @@ export default function Home(): JSX.Element {
               <a href={githubConta} target="_blank" rel="noopener noreferrer">
                 <FaGithub size={36} />
               </a>
-              <a href={githubConta} target="_blank" rel="noopener noreferrer">
+              <a href={gitlabConta} target="_blank" rel="noopener noreferrer">
                 <FaGitlab size={36} />
               </a>
             </SocialMedia>

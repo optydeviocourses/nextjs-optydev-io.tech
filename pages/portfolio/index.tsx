@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { FaFilePdf, FaWhatsapp } from 'react-icons/fa'
+import { FaWhatsapp } from 'react-icons/fa'
 
 import { Container, Project, Text } from '../../styles/portfolio/styles'
 import Button from '../../components/Button'
@@ -8,8 +8,8 @@ import SpecialButton from '../../components/SpecialButton'
 
 const blogName = process.env.NEXT_PUBLIC_BLOG_NAME
 const appTema = process.env.NEXT_PUBLIC_APP_TEMA
-const appCEO = process.env.NEXT_PUBLIC_APP_CEO
-const appCurriculum = process.env.NEXT_PUBLIC_APP_CURRICULUM
+// const appCEO = process.env.NEXT_PUBLIC_APP_CEO
+// const appCurriculum = process.env.NEXT_PUBLIC_APP_CURRICULUM
 
 export default function Portfolio(): JSX.Element {
   return (
@@ -263,7 +263,7 @@ export default function Portfolio(): JSX.Element {
             </Link>
           </Text>
         </Project>
-        
+
       </Container>
     </>
   )

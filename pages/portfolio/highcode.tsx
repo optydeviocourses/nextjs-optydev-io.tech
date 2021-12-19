@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { FaGithub, FaYoutube } from 'react-icons/fa'
+import { FaGithub,FaGitlab, FaYoutube } from 'react-icons/fa'
 
 import {
   Container,
@@ -10,6 +10,8 @@ import Button from '../../components/Button'
 
 const youtubeConta = process.env.NEXT_PUBLIC_YOUTUBE_CONTA
 const githubConta = process.env.NEXT_PUBLIC_GITHUB_CONTA
+const gitlabConta = process.env.NEXT_PUBLIC_GITLAB_CONTA
+
 const appTema = process.env.NEXT_PUBLIC_APP_TEMA
 const appName = process.env.NEXT_PUBLIC_APP_NAME
 
@@ -52,22 +54,36 @@ export default function highcode(): JSX.Element {
           - Descrição técnica:
           <span> </span>
         </strong>
+
         <ButtonContainer>
           <Button link={githubConta}>
             <FaGithub size={25} color="#fff" />
-            Conta do GITHUB
+            GITHUB
+          </Button>
+          <br></br>
+          <Button link={gitlabConta}>
+            <FaGitlab size={25} color="#fff" />
+            GITLAB
           </Button>
           <br></br>
           <Button link={youtubeConta}>
             <FaYoutube size={25} color="#fff" />
             Tutorais
           </Button>
-          <Link href="/portfolio/">
-            <a>
-              <Button>Retornar</Button>
-            </a>
-          </Link>
         </ButtonContainer>
+
+        <Link href="/portfolio/">
+          <a>
+            <Button>Retornar</Button>
+          </a>
+        </Link>
+
+        <Link href="/portfolio/">
+          <a>
+            <Button>Retornar</Button>
+          </a>
+        </Link>
+
       </Container>
     </>
   )
