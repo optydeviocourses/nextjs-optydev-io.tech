@@ -24,8 +24,13 @@ export default function nest(): JSX.Element {
         <meta name="description" content={appTema} />
       </Head>
       <Container>
-        <h1>NEXTJS</h1>
-        <img src="/assets/nest.svg" alt={appName} />
+        <h1>NEST</h1>
+        <img
+          width="200"
+          height="200"
+          src="/assets/nest.svg"
+          alt={appName}
+        />
         <strong>
           - Projeto:
           <span></span>
