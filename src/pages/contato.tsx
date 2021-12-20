@@ -13,7 +13,7 @@ import {
 
 const blogName = process.env.NEXT_PUBLIC_BLOG_NAME
 const blogContexts = process.env.NEXT_PUBLIC_BLOG_CONTEXTS
-const youtubeConta = process.env.NEXT_PUBLIC_YOUTUBE_CONTA
+// const youtubeConta = process.env.NEXT_PUBLIC_YOUTUBE_CONTA
 const whatsAppConta = process.env.NEXT_PUBLIC_WHATSAPP_CONTA
 const githubConta = process.env.NEXT_PUBLIC_GITHUB_CONTA
 const gitlabConta = process.env.NEXT_PUBLIC_GITLAB_CONTA
@@ -150,10 +150,10 @@ export default function Contato(): JSX.Element {
               <FaGitlab size={30} />
               <p>{blogName}</p>
             </a>
-            <a href={youtubeConta} target="_blank" rel="noopener noreferrer">
+            {/* <a href={youtubeConta} target="_blank" rel="noopener noreferrer">
               <FaYoutube size={30} />
               <p>{blogName}</p>
-            </a>
+            </a> */}
           </SocialMedia>
         </Contact>
         <Form onSubmit={onHandleSubmit} loading={loading}>

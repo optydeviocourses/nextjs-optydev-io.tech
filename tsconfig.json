@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/blog/sm-resolver.js"  ],
+, "src/pages/blog/sm-resolver.js"  ],
   "exclude": [
     "node_modules"
   ]
