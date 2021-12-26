@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react'
 import Head from 'next/head'
 import { ToastContainer, toast } from 'react-toastify'
-import { FaGithub, FaGitlab, FaYoutube, FaWhatsapp } from 'react-icons/fa'
+import { FaGithub, FaGitlab, FaWhatsapp } from 'react-icons/fa'
 import { GrMail } from 'react-icons/gr'
 import {
   Container,
