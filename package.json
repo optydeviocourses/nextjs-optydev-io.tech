@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
-    "postinstall": "husky install",
+    "postinstall": ["husky install", "npm install cloudinary"],
     "test": "jest",
     "test:watch": "jest --watch"
   },
