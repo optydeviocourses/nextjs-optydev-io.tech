@@ -28,7 +28,6 @@
     "axios": "^0.21.1",
     "graphql": "^15.5.0",
     "graphql-request": "^3.4.0",
-    "cloudinary": "latest", 
     "next": "^11.0.0",
     "next-slicezone": "^0.0.15",
     "prismic-javascript": "^3.0.2",
