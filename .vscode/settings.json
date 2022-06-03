@@ -5,12 +5,12 @@
   //"terminal.integrated.shell.osx": "/bin/zsh",
   "terminal.integrated.shell.osx": "/bin/zsh",
   "editor.formatOnSave": false,
-  "editor.renderIndentGuides": true,
   "editor.renderWhitespace": "all",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint":true
   },
   "cSpell.words": [
     "Prismic"
-  ]
+  ],
+  "editor.guides.indentation": true
 }
