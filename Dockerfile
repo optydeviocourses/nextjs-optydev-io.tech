@@ -15,6 +15,6 @@ COPY . .
 
 EXPOSE 3000
 # This run the server at default port 3000
-CMD ["yarn", "run", "start"]
+CMD ["npm", "run", "start"]
 # CMD ["npm", "install"]
 # CMD ["yarn", "start"]
